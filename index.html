@@ -1,0 +1,3074 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,viewport-fit=cover">
+<meta name="theme-color" content="#030308" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#030308">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="AUGMANITAI — Name That Moment. Terminologisches Nachschlagewerk zur Phänomenologie der Mensch-KI-Interaktion. 1000 Begriffe, rein deskriptiv, bilingual.">
+<meta name="author" content="Andreas Ehstand">
+<meta name="robots" content="index,follow">
+<meta name="referrer" content="no-referrer">
+<meta name="license" content="CC BY-NC-ND 4.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Name That Moment">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:title" content="AUGMANITAI — Name That Moment">
+<meta property="og:description" content="1000 Begriffe zur Phänomenologie der Mensch-KI-Interaktion.">
+<meta property="og:type" content="website">
+<meta name="citation_author" content="Ehstand, Andreas">
+<meta name="DC.rights" content="CC BY-NC-ND 4.0">
+<meta name="DC.identifier" content="https://orcid.org/0009-0006-3773-7796">
+<link rel="canonical" href="./name-that-moment.html">
+<link rel="alternate" hreflang="de" href="./name-that-moment.html">
+<link rel="alternate" hreflang="en" href="./name-that-moment.html?lang=en">
+<title>AUGMANITAI — Name That Moment</title>
+<script src="./terms.js"></script>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  html{-webkit-text-size-adjust:100%;touch-action:manipulation;overscroll-behavior:none}
+  :root{
+    --sa-t:env(safe-area-inset-top,0px);
+    --sa-r:env(safe-area-inset-right,0px);
+    --sa-b:env(safe-area-inset-bottom,0px);
+    --sa-l:env(safe-area-inset-left,0px);
+    --bg-0:#030308;
+    --bg-1:#070710;
+    --bg-2:#0c0c1a;
+    --bg-surface:rgba(14,14,28,0.72);
+    --bg-card:rgba(18,18,36,0.88);
+    --border:rgba(255,255,255,0.07);
+    --border-strong:rgba(255,255,255,0.16);
+    --text:#eef0fa;
+    --text-dim:#9ea0bd;
+    --text-mute:#606287;
+    --cyan:#00e5ff;
+    --mag:#ff3dcc;
+    --gold:#ffc24a;
+    --green:#2dffad;
+    --violet:#a27bff;
+    --radius:14px;
+    --radius-lg:22px;
+    --shadow-glow:0 0 40px rgba(0,229,255,.08),0 0 1px rgba(0,229,255,.4);
+    --ease:cubic-bezier(.2,.8,.2,1);
+    --font-display:'Inter','Segoe UI',system-ui,-apple-system,sans-serif;
+    --font-mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  }
+  html,body{height:100%;background:var(--bg-0);color:var(--text);font-family:var(--font-display);-webkit-font-smoothing:antialiased;overflow-x:hidden;overscroll-behavior:none}
+  body{
+    min-height:100dvh;
+    min-height:100svh;
+    padding-left:var(--sa-l);
+    padding-right:var(--sa-r);
+    background:var(--bg-0);
+    display:flex;flex-direction:column;
+    position:relative;
+  }
+  /* AURORA — slow morphing multi-color gradient mesh */
+  .aurora{
+    position:fixed;inset:-10%;z-index:-3;pointer-events:none;
+    background:
+      radial-gradient(ellipse 50% 40% at 20% 20%,rgba(0,229,255,.22),transparent 60%),
+      radial-gradient(ellipse 45% 35% at 80% 30%,rgba(255,61,204,.2),transparent 60%),
+      radial-gradient(ellipse 55% 45% at 30% 80%,rgba(162,123,255,.2),transparent 60%),
+      radial-gradient(ellipse 40% 30% at 75% 85%,rgba(45,255,173,.14),transparent 60%),
+      radial-gradient(ellipse 50% 40% at 50% 50%,rgba(255,194,74,.1),transparent 60%);
+    filter:blur(70px) saturate(1.3);
+    animation:auroraFlow 32s ease-in-out infinite alternate;
+    will-change:transform,filter;
+  }
+  @keyframes auroraFlow{
+    0%{transform:translate3d(-3%,-2%,0) rotate(0.2deg) scale(1);filter:blur(70px) saturate(1.3) hue-rotate(0deg)}
+    25%{transform:translate3d(2%,-3%,0) rotate(-0.3deg) scale(1.05);filter:blur(80px) saturate(1.4) hue-rotate(-10deg)}
+    50%{transform:translate3d(3%,2%,0) rotate(0.3deg) scale(1.02);filter:blur(90px) saturate(1.5) hue-rotate(10deg)}
+    75%{transform:translate3d(-2%,3%,0) rotate(-0.2deg) scale(1.04);filter:blur(75px) saturate(1.35) hue-rotate(5deg)}
+    100%{transform:translate3d(-3%,-2%,0) rotate(0.2deg) scale(1);filter:blur(70px) saturate(1.3) hue-rotate(0deg)}
+  }
+  /* STARFIELD CANVAS */
+  canvas.starfield{
+    position:fixed;inset:0;z-index:-2;pointer-events:none;
+    width:100%;height:100%;opacity:.9;
+  }
+  /* CONFETTI / BURST CANVAS (over everything except modals) */
+  canvas.fx{
+    position:fixed;inset:0;z-index:99;pointer-events:none;
+    width:100%;height:100%;
+  }
+  /* SCANLINE SWEEP */
+  .scanline{
+    position:absolute;left:0;right:0;top:0;height:2px;pointer-events:none;z-index:4;
+    background:linear-gradient(90deg,transparent,rgba(0,229,255,.9),rgba(162,123,255,.9),rgba(255,61,204,.9),transparent);
+    box-shadow:0 0 20px rgba(0,229,255,.7),0 0 40px rgba(162,123,255,.5);
+    transform:translateY(-20px);opacity:0;
+  }
+  .scanline.play{animation:scan 1.1s cubic-bezier(.22,.8,.2,1)}
+  @keyframes scan{
+    0%{transform:translateY(-20px);opacity:0}
+    10%{opacity:1}
+    90%{opacity:1}
+    100%{transform:translateY(calc(100% + 20px));opacity:0}
+  }
+  body::before{
+    content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.012) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(255,255,255,0.012) 1px,transparent 1px);
+    background-size:48px 48px;
+    mask-image:radial-gradient(ellipse at center, black 30%, transparent 75%);
+  }
+  body::after{
+    content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.4;
+    background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.04 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    mix-blend-mode:overlay;
+  }
+  /* HEADER */
+  header.top{
+    position:sticky;top:0;z-index:20;
+    backdrop-filter:blur(18px) saturate(1.4);
+    -webkit-backdrop-filter:blur(18px) saturate(1.4);
+    background:linear-gradient(180deg,rgba(3,3,8,.92),rgba(3,3,8,.6));
+    border-bottom:1px solid var(--border);
+    padding:calc(10px + var(--sa-t)) clamp(12px,3vw,28px) 10px;
+    display:flex;align-items:center;gap:14px;
+  }
+  .brand{display:flex;align-items:center;gap:10px;flex:0 0 auto;text-decoration:none;color:var(--text)}
+  .brand-logo{
+    width:34px;height:34px;border-radius:10px;
+    background:linear-gradient(135deg,#00e5ff,#a27bff 55%,#ff3dcc);
+    position:relative;
+    box-shadow:0 0 22px rgba(0,229,255,.35),inset 0 0 18px rgba(255,255,255,.15);
+  }
+  .brand-logo::after{
+    content:"";position:absolute;inset:6px;border-radius:6px;
+    background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.4),transparent 50%),#0a0a14;
+  }
+  .brand-txt{display:flex;flex-direction:column;line-height:1}
+  .brand-txt b{font-size:13px;letter-spacing:.18em;font-weight:700;color:#fff;text-transform:uppercase}
+  .brand-txt span{font-size:10px;letter-spacing:.28em;color:var(--text-mute);margin-top:3px;text-transform:uppercase}
+  .spacer{flex:1}
+  .hdr-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .pill{
+    font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;
+    padding:6px 10px;border-radius:999px;
+    background:var(--bg-surface);border:1px solid var(--border);color:var(--text-dim);
+    display:inline-flex;align-items:center;gap:6px;white-space:nowrap;
+  }
+  .pill b{color:var(--cyan);font-weight:600}
+  .pill.streak b{color:var(--gold)}
+  .lang-group{display:inline-flex;gap:4px;padding:4px;background:var(--bg-surface);border:1px solid var(--border);border-radius:999px}
+  .lang-group button{
+    font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:.1em;
+    border:0;background:transparent;color:var(--text-mute);cursor:pointer;
+    padding:5px 9px;border-radius:999px;text-transform:uppercase;transition:.2s var(--ease);
+  }
+  .lang-group button:hover:not(:disabled){color:var(--text)}
+  .lang-group button.active{background:linear-gradient(135deg,rgba(0,229,255,.18),rgba(162,123,255,.18));color:#fff}
+  .lang-group button:disabled{opacity:.32;cursor:not-allowed}
+
+  /* MODE TABS */
+  nav.modes{
+    display:flex;gap:6px;padding:10px clamp(12px,3vw,28px) 0;
+    overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;
+    position:sticky;top:calc(58px + var(--sa-t));z-index:15;
+    background:linear-gradient(180deg,rgba(3,3,8,.92),rgba(3,3,8,.6) 70%,transparent);
+    padding-bottom:10px;
+    border-bottom:1px solid var(--border);
+  }
+  nav.modes::-webkit-scrollbar{display:none}
+  .mode-btn{
+    flex:0 0 auto;border:1px solid var(--border);background:var(--bg-surface);color:var(--text-dim);
+    padding:9px 16px;border-radius:999px;cursor:pointer;
+    font-family:var(--font-display);font-size:13px;font-weight:500;letter-spacing:.02em;
+    display:inline-flex;align-items:center;gap:8px;
+    transition:all .22s var(--ease);
+    user-select:none;
+  }
+  .mode-btn:hover{border-color:var(--border-strong);color:var(--text)}
+  .mode-btn.active{
+    background:linear-gradient(135deg,rgba(0,229,255,.18),rgba(162,123,255,.14));
+    border-color:rgba(0,229,255,.5);color:#fff;
+    box-shadow:0 0 0 1px rgba(0,229,255,.25),0 10px 30px -10px rgba(0,229,255,.25);
+  }
+  .mode-btn .dot{width:6px;height:6px;border-radius:999px;background:currentColor;opacity:.65}
+
+  /* MAIN STAGE */
+  main{flex:1;display:flex;flex-direction:column;position:relative;z-index:1;padding:clamp(14px,3vw,32px);gap:clamp(14px,2vw,22px)}
+  .stage{position:relative;flex:1;display:flex;align-items:stretch;justify-content:center;min-height:clamp(440px,60vh,720px)}
+
+  /* TERM CARD */
+  .card{
+    --aura:190;
+    position:relative;width:100%;max-width:960px;margin:auto;
+    background:var(--bg-card);
+    border:1px solid var(--border-strong);
+    border-radius:var(--radius-lg);
+    padding:clamp(26px,4.5vw,56px);
+    display:flex;flex-direction:column;gap:clamp(16px,2.2vw,26px);
+    box-shadow:
+      0 40px 100px -30px rgba(0,0,0,.95),
+      0 0 0 1px rgba(255,255,255,.04) inset,
+      0 0 160px -40px hsla(var(--aura,190),90%,55%,.35);
+    overflow:visible;
+    transform:translateZ(0) perspective(1400px) rotateX(0deg) rotateY(0deg);
+    transform-style:preserve-3d;
+    transition:transform .22s var(--ease),box-shadow .8s var(--ease);
+    animation:cardIn .8s var(--ease);
+    will-change:transform;
+  }
+  .card.tilt-on{}
+  .card .tilt-glow{
+    position:absolute;inset:-1px;border-radius:inherit;pointer-events:none;
+    background:conic-gradient(from var(--ang,0deg) at 50% 50%,rgba(0,229,255,.0) 0deg,rgba(0,229,255,.65) 60deg,rgba(162,123,255,.55) 140deg,rgba(255,61,204,.5) 220deg,rgba(0,229,255,0) 360deg);
+    opacity:.55;
+    mask:linear-gradient(#000,#000) content-box,linear-gradient(#000,#000);
+    -webkit-mask:linear-gradient(#000,#000) content-box,linear-gradient(#000,#000);
+    -webkit-mask-composite:xor;mask-composite:exclude;
+    padding:1px;
+    transition:opacity .4s var(--ease);
+    animation:angSpin 12s linear infinite;
+  }
+  @property --ang{syntax:'<angle>';inherits:false;initial-value:0deg}
+  @keyframes angSpin{to{--ang:360deg}}
+  .card:hover .tilt-glow{opacity:.9}
+  .card::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:
+      radial-gradient(600px 300px at 0% 0%,rgba(0,229,255,.09),transparent 60%),
+      radial-gradient(500px 300px at 100% 100%,rgba(255,61,204,.08),transparent 60%);
+  }
+  .card::after{
+    content:"";position:absolute;top:0;left:0;right:0;height:1px;
+    background:linear-gradient(90deg,transparent,rgba(0,229,255,.5),rgba(162,123,255,.5),rgba(255,61,204,.5),transparent);
+    opacity:.55;
+  }
+  @keyframes cardIn{from{opacity:0;transform:translateY(18px) scale(.99)}to{opacity:1;transform:none}}
+
+  .card-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;position:relative;z-index:1}
+  .id-chip{
+    font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;
+    color:var(--cyan);text-transform:uppercase;font-weight:600;
+    padding:6px 10px;border-radius:8px;
+    background:rgba(0,229,255,.07);border:1px solid rgba(0,229,255,.24);
+  }
+  .band-chip{
+    font-family:var(--font-mono);font-size:10px;letter-spacing:.18em;
+    color:var(--text-dim);text-transform:uppercase;
+    padding:6px 10px;border-radius:8px;
+    background:rgba(255,255,255,.03);border:1px solid var(--border);
+  }
+  .lang-chip{
+    font-family:var(--font-mono);font-size:10px;letter-spacing:.18em;
+    color:var(--violet);text-transform:uppercase;
+    padding:6px 10px;border-radius:8px;
+    background:rgba(162,123,255,.06);border:1px solid rgba(162,123,255,.2);
+    margin-left:auto;
+  }
+
+  .term-name{
+    position:relative;z-index:1;
+    font-family:"Didot","Bodoni 72","Bodoni Moda","Cormorant Garamond","Playfair Display",Georgia,"Times New Roman",serif;
+    font-weight:500;font-style:italic;
+    font-size:clamp(36px,7vw,88px);
+    line-height:1.0;letter-spacing:-.01em;
+    background:linear-gradient(110deg,#ffffff 0%,#f0f6ff 15%,#d8e8ff 28%,#c7cfff 42%,#e4cdff 56%,#ffd7ee 70%,#ffeed1 84%,#ffffff 100%);
+    background-size:260% 100%;
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    text-wrap:balance;
+    filter:
+      drop-shadow(0 0 32px hsla(var(--aura,190),95%,70%,.35))
+      drop-shadow(0 0 80px hsla(var(--aura,190),95%,60%,.22))
+      drop-shadow(0 2px 0 rgba(0,0,0,.4));
+    animation:nameShimmer 9s ease-in-out infinite;
+  }
+  @keyframes nameShimmer{
+    0%,100%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+  }
+  .term-name .ch{display:inline-block;opacity:0;transform:translateY(14px) rotateX(-30deg);transform-origin:50% 100%;filter:blur(6px);transition:none}
+  .term-name .ch.in{opacity:1;transform:none;filter:none;transition:opacity .5s var(--ease),transform .55s var(--ease),filter .5s var(--ease)}
+  .term-name .sp{display:inline-block;width:.3em}
+  .def-text .wd,.dist-text .wd{display:inline-block;opacity:0;transform:translateY(6px);filter:blur(4px);transition:none;will-change:opacity,transform,filter}
+  .def-text .wd.in,.dist-text .wd.in{opacity:1;transform:none;filter:none;transition:opacity .45s var(--ease),transform .5s var(--ease),filter .4s var(--ease)}
+  .term-name::selection{background:rgba(0,229,255,.3);color:#fff}
+
+  .def-block{position:relative;z-index:1;display:flex;flex-direction:column;gap:clamp(12px,1.6vw,18px)}
+  .related-block{position:relative;z-index:1;margin-top:clamp(14px,1.8vw,22px);opacity:0;transform:translateY(10px);transition:opacity .9s var(--ease) .6s,transform .9s var(--ease) .6s}
+  .related-block.in{opacity:1;transform:none}
+  .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .related-card{
+    position:relative;
+    padding:11px 12px 12px;border-radius:12px;cursor:pointer;
+    background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.015));
+    border:1px solid rgba(255,255,255,.06);
+    overflow:hidden;
+    transition:transform .4s var(--ease),border-color .4s var(--ease),background .4s var(--ease);
+    min-height:64px;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .related-card::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(ellipse 120% 60% at 50% 100%,hsla(var(--raura,190),90%,60%,.18),transparent 70%);
+    opacity:.7;
+  }
+  .related-card:hover{transform:translateY(-2px);border-color:hsla(var(--raura,190),90%,60%,.35);background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02))}
+  .related-card .r-id{font-family:var(--font-mono);font-size:9px;letter-spacing:.14em;color:var(--text-mute);text-transform:uppercase}
+  .related-card .r-name{
+    font-family:"Didot","Bodoni 72","Cormorant Garamond","Playfair Display",Georgia,serif;
+    font-style:italic;font-weight:500;
+    font-size:14px;line-height:1.15;color:#e8ecff;
+    margin-top:4px;
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  }
+  @media (max-width:620px){
+    .related-grid{grid-template-columns:1fr 1fr}
+    .related-card:nth-child(3){display:none}
+  }
+  .peek-tooltip{
+    position:fixed;z-index:120;pointer-events:none;
+    background:rgba(8,8,20,.96);backdrop-filter:blur(18px);
+    border:1px solid rgba(0,229,255,.3);border-radius:10px;
+    padding:10px 14px;
+    font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;
+    color:#cfeeff;
+    box-shadow:0 20px 60px -20px rgba(0,0,0,.8),0 0 40px -10px rgba(0,229,255,.5);
+    opacity:0;transform:translate(-50%,-100%) translateY(-14px);
+    transition:opacity .22s var(--ease),transform .22s var(--ease);
+    white-space:nowrap;max-width:92vw;
+  }
+  .peek-tooltip.on{opacity:1}
+  .streak-dots{display:inline-flex;gap:2px;margin-left:6px;vertical-align:middle}
+  .streak-dots span{width:5px;height:5px;border-radius:50%;background:rgba(255,194,74,.55);box-shadow:0 0 8px rgba(255,194,74,.7);animation:streakPulse 2.4s ease-in-out infinite}
+  .streak-dots span:nth-child(2){animation-delay:.2s}
+  .streak-dots span:nth-child(3){animation-delay:.4s}
+  .streak-dots span:nth-child(4){animation-delay:.6s}
+  .streak-dots span:nth-child(5){animation-delay:.8s}
+  .streak-dots span:nth-child(6){animation-delay:1s}
+  .streak-dots span:nth-child(7){animation-delay:1.2s}
+  @keyframes streakPulse{0%,100%{opacity:.55;transform:scale(1)}50%{opacity:1;transform:scale(1.25)}}
+  .def-label{
+    font-family:var(--font-mono);font-size:10px;letter-spacing:.22em;
+    color:var(--text-mute);text-transform:uppercase;
+    display:flex;align-items:center;gap:8px;
+  }
+  .def-label::before{content:"";width:20px;height:1px;background:var(--border-strong)}
+  .def-text{
+    font-size:clamp(15px,1.55vw,18px);
+    line-height:1.62;color:var(--text);
+    text-wrap:pretty;
+    font-weight:400;
+  }
+  .dist-text{
+    font-size:clamp(13px,1.35vw,16px);
+    line-height:1.6;color:var(--text-dim);
+    font-style:italic;
+    border-left:2px solid rgba(162,123,255,.4);
+    padding-left:16px;
+    text-wrap:pretty;
+  }
+
+  /* CARD CONTROLS */
+  .card-ctrl{position:relative;z-index:1;display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:6px;align-items:center}
+  .btn{
+    border:1px solid var(--border-strong);background:rgba(255,255,255,.025);
+    color:var(--text);
+    padding:12px 20px;border-radius:12px;cursor:pointer;
+    font-family:var(--font-display);font-size:14px;font-weight:500;
+    display:inline-flex;align-items:center;gap:10px;
+    transition:all .22s var(--ease);
+    user-select:none;touch-action:manipulation;
+  }
+  .btn:hover{border-color:rgba(0,229,255,.5);background:rgba(0,229,255,.08);color:#fff;transform:translateY(-1px)}
+  .btn:active{transform:translateY(0) scale(.98)}
+  .btn svg{width:16px;height:16px}
+  .btn.prim{
+    background:linear-gradient(135deg,rgba(0,229,255,.18),rgba(162,123,255,.14));
+    border-color:rgba(0,229,255,.5);
+    box-shadow:0 0 0 1px rgba(0,229,255,.18),0 10px 30px -10px rgba(0,229,255,.25);
+  }
+  .btn.prim:hover{background:linear-gradient(135deg,rgba(0,229,255,.28),rgba(162,123,255,.22))}
+  .btn.ghost{background:transparent;border-color:var(--border)}
+  .btn .kbd{font-family:var(--font-mono);font-size:10px;color:var(--text-mute);border:1px solid var(--border);padding:1px 6px;border-radius:4px;margin-left:4px}
+  .btn.collected{border-color:rgba(45,255,173,.5);background:rgba(45,255,173,.08);color:#c8ffe8}
+  .btn.collected svg{color:var(--green)}
+  .ctrl-spacer{flex:1}
+
+  /* COLLECTION VIEW */
+  .collection{
+    width:100%;max-width:1200px;margin:auto;
+    background:var(--bg-card);border:1px solid var(--border-strong);
+    border-radius:var(--radius-lg);padding:clamp(18px,3vw,32px);
+    display:none;flex-direction:column;gap:18px;
+    box-shadow:0 30px 80px -30px rgba(0,0,0,.9);
+  }
+  .collection.on{display:flex;animation:cardIn .5s var(--ease)}
+  .coll-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .coll-head h2{font-size:clamp(18px,2.4vw,26px);font-weight:700;letter-spacing:-.01em}
+  .coll-progress{
+    flex:1;min-width:180px;
+    height:8px;background:rgba(255,255,255,.05);border-radius:999px;
+    position:relative;overflow:hidden;
+  }
+  .coll-progress .bar{
+    position:absolute;inset:0;width:0%;
+    background:linear-gradient(90deg,var(--cyan),var(--violet),var(--mag));
+    border-radius:999px;
+    box-shadow:0 0 20px rgba(0,229,255,.5);
+    transition:width .5s var(--ease);
+  }
+  .coll-stats{font-family:var(--font-mono);font-size:12px;color:var(--text-dim);white-space:nowrap}
+  .coll-stats b{color:var(--cyan);font-weight:700}
+  .coll-band-filter{display:flex;flex-wrap:wrap;gap:6px}
+  .coll-band-filter button{
+    font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+    padding:6px 10px;border-radius:999px;border:1px solid var(--border);
+    background:var(--bg-surface);color:var(--text-dim);cursor:pointer;transition:.2s var(--ease);
+  }
+  .coll-band-filter button:hover{color:var(--text);border-color:var(--border-strong)}
+  .coll-band-filter button.active{background:rgba(0,229,255,.12);border-color:rgba(0,229,255,.4);color:#fff}
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(66px,1fr));
+    gap:6px;
+    max-height:62vh;overflow-y:auto;padding:4px;
+  }
+  .grid::-webkit-scrollbar{width:6px}
+  .grid::-webkit-scrollbar-thumb{background:var(--border-strong);border-radius:999px}
+  .cell{
+    aspect-ratio:1/1;border:1px solid var(--border);border-radius:8px;
+    background:rgba(255,255,255,.015);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--font-mono);font-size:10px;color:var(--text-mute);
+    cursor:pointer;transition:.15s var(--ease);
+    position:relative;
+  }
+  .cell:hover{transform:scale(1.08);border-color:var(--border-strong);color:var(--text);z-index:2}
+  .cell.seen{
+    background:linear-gradient(135deg,rgba(0,229,255,.12),rgba(162,123,255,.08));
+    border-color:rgba(0,229,255,.4);color:#cfeeff;
+    box-shadow:0 0 14px rgba(0,229,255,.15);
+  }
+  .cell.today{
+    border-color:var(--gold) !important;
+    box-shadow:0 0 16px rgba(255,194,74,.4);
+  }
+
+  /* INFO VIEW */
+  .info-view{
+    width:100%;max-width:860px;margin:auto;
+    background:var(--bg-card);border:1px solid var(--border-strong);
+    border-radius:var(--radius-lg);padding:clamp(20px,4vw,42px);
+    display:none;flex-direction:column;gap:18px;
+    box-shadow:0 30px 80px -30px rgba(0,0,0,.9);
+  }
+  .info-view.on{display:flex;animation:cardIn .5s var(--ease)}
+  .info-view h2{font-size:clamp(22px,3vw,32px);font-weight:700;letter-spacing:-.015em}
+  .info-view h3{font-size:14px;font-weight:600;color:var(--cyan);letter-spacing:.08em;text-transform:uppercase;margin-top:8px}
+  .info-view p{font-size:15px;line-height:1.65;color:var(--text-dim)}
+  .info-view .small{font-size:12px;color:var(--text-mute);line-height:1.6;font-family:var(--font-mono)}
+
+  /* FOOTER */
+  footer{
+    position:relative;z-index:1;
+    padding:20px clamp(14px,3vw,28px) 32px;
+    border-top:1px solid var(--border);
+    background:linear-gradient(180deg,transparent,rgba(3,3,8,.85));
+    font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;
+    color:var(--text-mute);
+    display:flex;flex-direction:column;gap:12px;
+  }
+  .footer-disclaimer{
+    padding:14px 16px;
+    border:1px solid rgba(255,68,102,.25);
+    border-radius:10px;
+    background:rgba(255,68,102,.04);
+  }
+  footer .fl{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  footer .chip{padding:4px 8px;border-radius:6px;background:rgba(255,255,255,.025);border:1px solid var(--border)}
+
+  /* LEGAL MODAL */
+  .legal{
+    position:fixed;inset:0;z-index:100;background:rgba(3,3,8,.88);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    display:none;align-items:center;justify-content:center;padding:20px;
+  }
+  .legal.on{display:flex;animation:cardIn .3s var(--ease)}
+  .legal-box{
+    max-width:820px;max-height:85vh;overflow-y:auto;
+    background:var(--bg-card);border:1px solid var(--border-strong);border-radius:var(--radius-lg);
+    padding:clamp(24px,4vw,40px);
+    box-shadow:0 40px 120px -20px rgba(0,0,0,.9);
+  }
+  .legal-box h2{font-size:22px;font-weight:700;margin-bottom:6px}
+  .legal-box h3{font-size:12px;font-weight:600;color:var(--cyan);letter-spacing:.14em;text-transform:uppercase;margin-top:22px;margin-bottom:6px}
+  .legal-box p{font-size:13px;line-height:1.6;color:var(--text-dim);margin-bottom:6px}
+  .legal-box .close{margin-top:22px}
+  .legal-box .lang-split{display:grid;grid-template-columns:1fr;gap:14px}
+  @media(min-width:760px){.legal-box .lang-split{grid-template-columns:1fr 1fr}}
+  .legal-box .col{border-left:2px solid rgba(0,229,255,.22);padding-left:14px}
+  .legal-box .col h4{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:10px}
+  .legal-box .col p{font-size:12px;margin-bottom:8px}
+  .legal-box .col b{color:var(--text)}
+
+  /* EXPORT CANVAS WRAPPER */
+  #exportCanvas{display:none}
+
+  /* ANIMATIONS */
+  .fade-swap{animation:fadeSwap .55s var(--ease)}
+  @keyframes fadeSwap{
+    0%{opacity:0;transform:translateY(12px) scale(.995);filter:blur(3px)}
+    100%{opacity:1;transform:none;filter:none}
+  }
+  .pulse{animation:pulse 2.6s var(--ease) infinite}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(0,229,255,.35)}50%{box-shadow:0 0 0 14px rgba(0,229,255,0)}}
+
+  /* LOADING */
+  .loader{
+    position:fixed;inset:0;display:flex;align-items:center;justify-content:center;
+    background:var(--bg-0);z-index:200;transition:opacity .4s var(--ease);
+  }
+  .loader.gone{opacity:0;pointer-events:none}
+  .loader .ring{
+    width:48px;height:48px;border-radius:50%;
+    border:2px solid rgba(255,255,255,.08);
+    border-top-color:var(--cyan);border-right-color:var(--violet);
+    animation:spin .9s linear infinite;
+  }
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  /* TAP ZONES (Stories-Pattern) — only edges, center stays free */
+  .tap-zones{position:absolute;top:0;left:0;right:0;bottom:92px;z-index:3;display:none;pointer-events:none}
+  .tap-zones.on{display:flex}
+  .tap-zones .tz{min-height:44px}
+  .tap-zones .tz.prev{flex:0 0 24%;pointer-events:auto;cursor:w-resize}
+  .tap-zones .tz.center{flex:1;pointer-events:none}
+  .tap-zones .tz.next{flex:0 0 24%;pointer-events:auto;cursor:e-resize}
+
+  /* BOTTOM NAV (Mobile only, Thumb-Zone) */
+  .bottom-nav{
+    display:none;
+    position:fixed;bottom:0;left:0;right:0;z-index:25;
+    padding:10px 10px calc(10px + var(--sa-b));
+    background:linear-gradient(180deg,rgba(3,3,8,0) 0%,rgba(3,3,8,.92) 35%);
+    backdrop-filter:blur(20px) saturate(1.4);
+    -webkit-backdrop-filter:blur(20px) saturate(1.4);
+    pointer-events:auto;
+  }
+  .bottom-nav-inner{
+    display:flex;justify-content:space-around;align-items:center;
+    background:rgba(14,14,28,.85);
+    border:1px solid var(--border-strong);
+    border-radius:999px;
+    padding:6px;
+    box-shadow:0 20px 60px -20px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.02);
+  }
+  .bn-btn{
+    flex:1;min-height:48px;min-width:48px;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
+    border:0;background:transparent;color:var(--text-mute);
+    border-radius:999px;cursor:pointer;
+    font-family:var(--font-display);font-size:10px;font-weight:600;letter-spacing:.04em;
+    transition:.22s var(--ease);
+    user-select:none;
+  }
+  .bn-btn svg{width:22px;height:22px;transition:.22s var(--ease)}
+  .bn-btn:active{transform:scale(.92)}
+  .bn-btn.active{
+    color:#fff;
+    background:linear-gradient(135deg,rgba(0,229,255,.22),rgba(162,123,255,.16));
+    box-shadow:0 0 0 1px rgba(0,229,255,.28),0 6px 20px -8px rgba(0,229,255,.4);
+  }
+  .bn-btn.active svg{filter:drop-shadow(0 0 6px rgba(0,229,255,.7))}
+
+  /* Collect burst (Instagram-like double tap) */
+  .burst{
+    position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scale(0);
+    pointer-events:none;z-index:10;
+    width:140px;height:140px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .burst svg{width:140px;height:140px;filter:drop-shadow(0 0 24px rgba(0,229,255,.7)) drop-shadow(0 0 40px rgba(162,123,255,.5))}
+  .burst.play{animation:burst .9s var(--ease)}
+  @keyframes burst{
+    0%{transform:translate(-50%,-50%) scale(0);opacity:0}
+    25%{transform:translate(-50%,-50%) scale(1.1);opacity:1}
+    60%{transform:translate(-50%,-50%) scale(1);opacity:1}
+    100%{transform:translate(-50%,-50%) scale(1.3);opacity:0}
+  }
+
+  /* RESPONSIVE */
+  @media (max-width:760px){
+    header.top{gap:8px;padding-left:14px;padding-right:14px}
+    .brand-txt span{display:none}
+    .brand-txt b{font-size:12px;letter-spacing:.14em}
+    .hdr-meta .lang-group{padding:3px}
+    .hdr-meta .lang-group button{padding:5px 7px;font-size:10px;min-width:28px}
+    /* hide most lang buttons on mobile, keep only active + EN/DE */
+    .hdr-meta .lang-group .lng[data-lang="fr"],
+    .hdr-meta .lang-group .lng[data-lang="es"],
+    .hdr-meta .lang-group .lng[data-lang="it"],
+    .hdr-meta .lang-group .lng[data-lang="pt"],
+    .hdr-meta .lang-group .lng[data-lang="nl"],
+    .hdr-meta .lang-group .lng[data-lang="pl"],
+    .hdr-meta .lang-group .lng[data-lang="zh"],
+    .hdr-meta .lang-group .lng[data-lang="ja"],
+    .hdr-meta .lang-group .lng[data-lang="ar"],
+    .hdr-meta .lang-group .lng[data-lang="hi"]{display:none}
+    .hdr-meta .pill:not(.streak){display:none}
+    nav.modes{display:none}
+    main{padding:12px 12px calc(110px + var(--sa-b))}
+    .card{padding:22px 18px;border-radius:18px;min-height:calc(100dvh - 180px)}
+    .term-name{font-size:clamp(30px,10vw,46px)}
+    .def-text{font-size:15.5px}
+    .dist-text{font-size:14px}
+    .card-ctrl{flex-wrap:nowrap;gap:8px}
+    .card-ctrl .btn span:not(.kbd){display:none}
+    .card-ctrl .btn{padding:12px;min-width:48px;min-height:48px;justify-content:center}
+    .card-ctrl .btn.prim{padding:12px 18px}
+    .card-ctrl .btn.prim span{display:inline}
+    .card-ctrl .btn svg{width:18px;height:18px}
+    .bottom-nav{display:block}
+    footer{display:block;padding:14px 12px calc(90px + var(--sa-b));margin-top:20px;border-top:1px solid var(--border)}
+    footer .fl{font-size:10px;gap:6px}
+    footer .footer-disclaimer p{font-size:11px!important;line-height:1.45!important}
+    .info-view{padding:22px 18px}
+    .collection{padding:18px 16px}
+    .tap-zones{display:flex}
+    .tap-zones.on{display:flex}
+    .grid{grid-template-columns:repeat(auto-fill,minmax(52px,1fr));gap:5px;max-height:calc(100dvh - 340px)}
+    .cell{font-size:9px}
+    .legal-box{padding:22px 18px;max-height:88vh}
+    .legal-box .col p{font-size:11.5px}
+  }
+  @media (max-width:420px){
+    .brand-logo{width:30px;height:30px}
+    .brand-txt b{font-size:11px}
+    .card{padding:20px 16px}
+    .term-name{font-size:clamp(26px,9vw,38px)}
+  }
+
+  /* ============ MOBILE / TOUCH OPTIMIZATIONS ============ */
+  html,body{overscroll-behavior:contain}
+  .card,.term-name,.def-text,.dist-text,.btn,.mode-btn,.bn-btn,.landing,.landing-title,.landing-sub,.landing-desc,.landing-cta,.landing-chip,.brand{
+    -webkit-user-select:none;user-select:none;-webkit-touch-callout:none;
+  }
+  .def-text,.dist-text{-webkit-user-select:text;user-select:text}
+
+  /* Touch-device: hide mouse-only features, lighten effects */
+  @media (hover:none) and (pointer:coarse){
+    /* kill mouse-only eye-candy that doesn't work on touch */
+    canvas.sparkles{display:none!important}
+    .card .tilt-glow{animation-duration:18s}
+    /* Cheaper blending on mobile */
+    .grain{display:none}
+    .mandala{opacity:.35;mix-blend-mode:normal;animation-duration:180s}
+    .halo{filter:blur(28px)}
+    /* Starfield + Fx canvas stay but lighter — enforced via JS budget */
+    .vignette{background:radial-gradient(ellipse 120% 90% at 50% 50%,transparent 45%,rgba(0,0,0,.4) 85%,rgba(0,0,0,.6) 100%)}
+  }
+
+  /* Mobile layout tightening */
+  @media (max-width:760px){
+    :root{--radius-lg:20px}
+    /* header clearance for Dynamic Island */
+    header.top{padding-top:calc(env(safe-area-inset-top) + 10px)}
+    /* No scroll inside card; keep content inside viewport */
+    main{padding:10px 12px calc(96px + env(safe-area-inset-bottom))}
+    .card{
+      padding:22px 18px 20px;
+      min-height:calc(100dvh - 210px - env(safe-area-inset-bottom));
+      overflow:visible;
+    }
+    .term-name{
+      font-size:clamp(32px,9.5vw,52px);
+      font-style:italic;line-height:.96;
+      hyphens:auto;-webkit-hyphens:auto;word-break:normal;
+    }
+    .def-text{font-size:15.5px;line-height:1.55;max-width:60ch;hyphens:auto;-webkit-hyphens:auto}
+    .dist-text{font-size:13.5px;line-height:1.55;hyphens:auto;-webkit-hyphens:auto}
+    .def-block{gap:10px}
+    /* Minimum 48×48 for all tappable */
+    .btn,.mode-btn,.bn-btn,.lng,.pill,.landing-chip,.landing-skip,.landing-cta,#resetBtn,#motionToggle{min-height:48px;min-width:48px}
+    .bn-btn{padding:10px 6px 6px}
+    .bottom-nav{padding-bottom:calc(10px + env(safe-area-inset-bottom))}
+    /* Collection grid: momentum scroll + content-visibility */
+    .grid{
+      -webkit-overflow-scrolling:touch;
+      scroll-behavior:smooth;
+      content-visibility:auto;
+    }
+    .cell{content-visibility:auto;contain-intrinsic-size:52px}
+    /* mandala half */
+    .mandala{inset:-4%;opacity:.32}
+    /* halo tighter */
+    .halo{inset:-20% -10%}
+    /* Kill hover ring (mobile doesn't hover) */
+    .card:hover .tilt-glow{opacity:.55}
+    /* Divine accent thinner */
+    .divine-accent{opacity:.7}
+  }
+  @media (max-width:420px){
+    .term-name{font-size:clamp(30px,9.5vw,46px)}
+    .def-text{font-size:15px}
+    .card{padding:18px 16px 18px}
+    .landing-title{font-size:clamp(40px,12vw,72px)!important}
+    .landing-sub{font-size:15px!important}
+    .landing-desc{font-size:12.5px!important;max-width:90vw}
+  }
+  /* iPhone SE specifically */
+  @media (max-width:380px) and (max-height:680px){
+    .landing-orb{margin:-14% 0 -14% 0}
+    .landing-title{font-size:clamp(36px,11vw,60px)!important}
+    .landing-inner{gap:14px}
+  }
+  /* Landscape phones: compact landing */
+  @media (max-height:520px) and (orientation:landscape){
+    .landing{padding-top:calc(env(safe-area-inset-top) + 20px);padding-bottom:20px}
+    .landing-orb{display:none}
+    .landing-title{font-size:clamp(34px,6vw,64px)}
+    .landing-inner{gap:10px}
+    .landing-desc{display:none}
+  }
+
+  /* Ripple on tap */
+  .ripple{position:absolute;pointer-events:none;border-radius:50%;
+    background:radial-gradient(circle,rgba(255,255,255,.35) 0%,rgba(255,255,255,0) 60%);
+    transform:translate(-50%,-50%) scale(0);opacity:1;
+    animation:rip .55s ease-out forwards;
+    mix-blend-mode:screen;
+  }
+  @keyframes rip{
+    0%{transform:translate(-50%,-50%) scale(0);opacity:1}
+    100%{transform:translate(-50%,-50%) scale(2.4);opacity:0}
+  }
+
+  /* Swipe-peek indicator — thin glow on the side where user swipes */
+  .edge-glow{position:absolute;top:0;bottom:0;width:6px;pointer-events:none;opacity:0;z-index:6;transition:opacity .25s var(--ease)}
+  .edge-glow.left{left:0;background:linear-gradient(90deg,rgba(0,229,255,.8),transparent);box-shadow:0 0 40px rgba(0,229,255,.7)}
+  .edge-glow.right{right:0;background:linear-gradient(-90deg,rgba(255,61,204,.8),transparent);box-shadow:0 0 40px rgba(255,61,204,.7)}
+  .edge-glow.on{opacity:1}
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+    .pulse{animation:none}
+  }
+
+  /* FOCUS */
+  button:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+  a:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+
+  /* ===== DIVINE LAYERS ===== */
+  /* Vignette */
+  .vignette{position:fixed;inset:0;z-index:97;pointer-events:none;
+    background:radial-gradient(ellipse 120% 90% at 50% 50%,transparent 40%,rgba(0,0,0,.35) 80%,rgba(0,0,0,.65) 100%);
+    mix-blend-mode:multiply;
+  }
+  /* Film grain via SVG noise */
+  .grain{position:fixed;inset:0;z-index:96;pointer-events:none;opacity:.07;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.85'/></svg>");
+  }
+  /* Halo ring behind card */
+  .halo{position:absolute;inset:-40% -20%;pointer-events:none;z-index:-1;
+    background:radial-gradient(ellipse 60% 55% at 50% 50%,
+      hsla(var(--aura,190),95%,65%,.18) 0%,
+      hsla(var(--aura,190),95%,60%,.08) 30%,
+      transparent 60%);
+    filter:blur(40px);
+    animation:haloBreath 7s ease-in-out infinite;
+  }
+  @keyframes haloBreath{0%,100%{transform:scale(1);opacity:.85}50%{transform:scale(1.06);opacity:1}}
+
+  /* Mandala ring behind card */
+  .mandala{position:absolute;inset:-12%;z-index:-1;pointer-events:none;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><g fill='none' stroke='white' stroke-opacity='0.12' stroke-width='0.4'><circle cx='200' cy='200' r='180'/><circle cx='200' cy='200' r='160'/><circle cx='200' cy='200' r='140'/><circle cx='200' cy='200' r='120'/><circle cx='200' cy='200' r='100'/><circle cx='200' cy='200' r='80'/><g stroke-opacity='0.18'><line x1='200' y1='20' x2='200' y2='380'/><line x1='20' y1='200' x2='380' y2='200'/><line x1='52' y1='52' x2='348' y2='348'/><line x1='348' y1='52' x2='52' y2='348'/><line x1='100' y1='20' x2='100' y2='380'/><line x1='300' y1='20' x2='300' y2='380'/><line x1='20' y1='100' x2='380' y2='100'/><line x1='20' y1='300' x2='380' y2='300'/></g><polygon points='200,30 340,290 60,290' stroke-opacity='0.14'/><polygon points='200,370 340,110 60,110' stroke-opacity='0.14'/></g></svg>");
+    background-size:contain;background-position:center;background-repeat:no-repeat;
+    opacity:.6;mix-blend-mode:screen;
+    animation:mandalaSpin 120s linear infinite;
+  }
+  @keyframes mandalaSpin{to{transform:rotate(360deg)}}
+
+  /* Golden ratio accent line at top */
+  .divine-accent{position:fixed;left:0;right:0;top:calc(env(safe-area-inset-top) + 0px);height:1px;z-index:5;pointer-events:none;
+    background:linear-gradient(90deg,transparent 0%,rgba(255,194,74,.0) 20%,rgba(255,194,74,.5) 38%,rgba(0,229,255,.6) 50%,rgba(162,123,255,.5) 62%,rgba(255,194,74,.0) 80%,transparent 100%);
+    animation:accentGlow 9s ease-in-out infinite;
+  }
+  @keyframes accentGlow{0%,100%{opacity:.5;filter:blur(0px)}50%{opacity:1;filter:blur(1.2px)}}
+
+  /* ===== LANDING / INTRO SCREEN ===== */
+  .landing{
+    position:fixed;inset:0;z-index:50;
+    display:none;flex-direction:column;align-items:center;justify-content:center;
+    padding:calc(env(safe-area-inset-top) + 40px) 20px calc(env(safe-area-inset-bottom) + 40px);
+    text-align:center;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 35%,rgba(0,229,255,.12),transparent 60%),
+      radial-gradient(ellipse 80% 60% at 50% 70%,rgba(162,123,255,.12),transparent 60%),
+      rgba(3,3,8,.55);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+  }
+  .landing.on{display:flex}
+  .landing-inner{max-width:860px;width:100%;display:flex;flex-direction:column;gap:clamp(18px,3vw,28px);align-items:center}
+  .landing-kicker{
+    font-size:clamp(11px,1.1vw,13px);letter-spacing:.28em;text-transform:uppercase;color:#a9afd1;
+    display:inline-flex;gap:10px;align-items:center;
+    min-height:16px;
+  }
+  .landing-kicker::before,.landing-kicker::after{content:"";width:40px;height:1px;background:linear-gradient(90deg,transparent,rgba(0,229,255,.6),transparent)}
+  .landing-kicker-text{display:inline-block;transition:opacity .6s var(--ease)}
+
+  /* Orbital ring around title */
+  .landing-orb{
+    position:relative;width:clamp(260px,60vw,720px);aspect-ratio:1;display:flex;align-items:center;justify-content:center;
+    margin:-8% 0 -10% 0;pointer-events:none;
+  }
+  .landing-orb svg{position:absolute;inset:0;width:100%;height:100%;opacity:.55}
+  .landing-orb .ring-outer{animation:ringSpin 80s linear infinite}
+  .landing-orb .ring-inner{animation:ringSpin 50s linear infinite reverse}
+  .landing-orb .orb-node{fill:#fff;filter:drop-shadow(0 0 6px rgba(0,229,255,.9))}
+  @keyframes ringSpin{to{transform:rotate(360deg)}}
+
+  .landing-title{position:relative;z-index:2}
+
+  /* Breathing subtitle */
+  .landing-sub{animation:subBreath 6s ease-in-out infinite}
+  @keyframes subBreath{0%,100%{letter-spacing:.01em;opacity:.85}50%{letter-spacing:.03em;opacity:1}}
+  .landing-title{
+    font-weight:900;font-size:clamp(48px,10vw,140px);line-height:.94;letter-spacing:-.02em;
+    background:linear-gradient(100deg,#ffffff 0%,#c8f0ff 20%,#a27bff 40%,#ff3dcc 60%,#ffc24a 80%,#ffffff 100%);
+    background-size:260% 100%;
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    animation:landTitleShimmer 8s ease-in-out infinite;
+    filter:drop-shadow(0 0 40px rgba(0,229,255,.25)) drop-shadow(0 0 80px rgba(162,123,255,.18));
+  }
+  @keyframes landTitleShimmer{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+  .landing-sub{
+    font-size:clamp(16px,2.2vw,26px);font-weight:500;color:#e7e9ff;letter-spacing:.01em;
+    max-width:640px;line-height:1.5;
+  }
+  .landing-desc{
+    font-size:clamp(13px,1.5vw,17px);color:#a9afd1;max-width:580px;line-height:1.6;
+  }
+  .landing-cta{
+    position:relative;margin-top:14px;
+    padding:18px 44px;border-radius:999px;
+    font-size:clamp(16px,2vw,20px);font-weight:700;letter-spacing:.02em;
+    color:#03040d;
+    background:linear-gradient(110deg,#00e5ff 0%,#a27bff 50%,#ff3dcc 100%);
+    background-size:200% 100%;
+    border:none;cursor:pointer;
+    box-shadow:0 12px 40px -8px rgba(0,229,255,.6),0 0 0 1px rgba(255,255,255,.2) inset,0 0 80px -10px rgba(162,123,255,.5);
+    animation:ctaShimmer 4s ease-in-out infinite, ctaPulse 2.4s ease-in-out infinite;
+    transition:transform .2s var(--ease);
+  }
+  .landing-cta:hover{transform:translateY(-2px) scale(1.02)}
+  .landing-cta:active{transform:translateY(0) scale(.98)}
+  .landing-cta::after{
+    content:"";position:absolute;inset:-4px;border-radius:999px;pointer-events:none;
+    background:conic-gradient(from 0deg,rgba(0,229,255,.8),rgba(162,123,255,.8),rgba(255,61,204,.8),rgba(0,229,255,.8));
+    filter:blur(14px);opacity:.55;z-index:-1;
+    animation:ctaRotate 6s linear infinite;
+  }
+  @keyframes ctaShimmer{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+  @keyframes ctaPulse{0%,100%{box-shadow:0 12px 40px -8px rgba(0,229,255,.6),0 0 0 1px rgba(255,255,255,.2) inset,0 0 60px -10px rgba(162,123,255,.5)}50%{box-shadow:0 16px 60px -8px rgba(0,229,255,.8),0 0 0 1px rgba(255,255,255,.3) inset,0 0 120px -10px rgba(162,123,255,.7)}}
+  @keyframes ctaRotate{to{transform:rotate(360deg)}}
+  .landing-meta{
+    display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:8px;
+    font-size:11px;color:#7a7f9a;letter-spacing:.12em;text-transform:uppercase;
+  }
+  .landing-meta span{opacity:.8}
+  .landing-chips{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:4px}
+  .landing-chip{
+    font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+    padding:6px 12px;border-radius:999px;
+    border:1px solid rgba(255,255,255,.12);
+    background:rgba(255,255,255,.04);
+    color:#cfd3ea;
+  }
+  .landing-skip{
+    position:absolute;top:calc(env(safe-area-inset-top) + 16px);right:20px;
+    font-size:12px;color:#8a8fad;background:none;border:none;cursor:pointer;letter-spacing:.08em;text-transform:uppercase;
+  }
+  .landing-skip:hover{color:#fff}
+  @media (max-width:760px){
+    .landing-meta{font-size:10px}
+    .landing-cta{padding:16px 36px}
+  }
+
+  /* Card inner light breath */
+  .card::before{animation:cardInnerBreath 7s ease-in-out infinite}
+  @keyframes cardInnerBreath{0%,100%{opacity:.55}50%{opacity:1}}
+
+  /* Cursor sparkles layer */
+  canvas.sparkles{position:fixed;inset:0;z-index:98;pointer-events:none;width:100%;height:100%}
+
+  /* Motion off / reduced */
+  .motion-off .aurora,.motion-off .term-name,.motion-off .scanline,.motion-off .card .tilt-glow,.motion-off .landing-title,.motion-off .landing-cta,.motion-off .landing-cta::after,.motion-off .card::before,.motion-off .card,.motion-off .halo,.motion-off .mandala,.motion-off .divine-accent{animation:none!important}
+  .motion-off canvas.starfield,.motion-off canvas.fx,.motion-off canvas.sparkles,.motion-off .grain{display:none!important}
+  .motion-off .term-name .ch,.motion-off .def-text .wd,.motion-off .dist-text .wd{opacity:1;transform:none;filter:none}
+  @media (prefers-reduced-motion: reduce){
+    .aurora,.term-name,.scanline,.card .tilt-glow,.landing-title,.landing-cta,.landing-cta::after,.card::before,.card,.halo,.mandala,.divine-accent{animation:none!important}
+    canvas.starfield,canvas.fx,canvas.sparkles,.grain{display:none!important}
+    .term-name .ch,.def-text .wd,.dist-text .wd{opacity:1;transform:none;filter:none}
+  }
+
+  /* PRINT — Disclaimer MUSS gedruckt werden */
+  @media print {
+    .aurora,.starfield,.sparkles,.fx,.grain,nav,.bottom-nav,.tap-zones,.modes,canvas,.legal,.gate{display:none!important}
+    body{background:#fff!important;color:#000!important}
+    main{padding:10px}
+    .card,.term-name,.def-text,.dist-text{color:#000!important;background:#fff!important;box-shadow:none!important;border-color:#000!important}
+    footer{display:block!important;border-top:2px solid #000!important;margin-top:20px;padding:14px 0;color:#000!important;background:#fff!important;page-break-inside:avoid}
+    footer *{color:#000!important;background:#fff!important;border-color:#000!important}
+    .footer-disclaimer p{font-size:11px!important;line-height:1.5!important}
+    .footer-disclaimer b{color:#a00!important}
+  }
+
+  /* FIRST-VISIT GATE */
+  .gate{
+    position:fixed;inset:0;z-index:9999;background:rgba(2,2,6,.97);
+    backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+    display:none;align-items:center;justify-content:center;padding:18px;
+  }
+  .gate.on{display:flex}
+  .gate-box{
+    max-width:680px;max-height:92vh;overflow-y:auto;
+    background:linear-gradient(180deg,rgba(20,8,12,.98),rgba(8,4,8,.98));
+    border:2px solid rgba(255,68,102,.55);border-radius:16px;
+    padding:clamp(22px,4vw,36px);
+    box-shadow:0 0 0 1px rgba(255,68,102,.15),0 30px 100px -10px rgba(255,0,80,.35);
+  }
+  .gate-box h2{font-size:22px;font-weight:800;margin-bottom:8px;color:#ff4466;letter-spacing:.02em}
+  .gate-box .gate-sub{font-size:12px;color:#9aa;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}
+  .gate-box p{font-size:13.5px;line-height:1.6;color:#ddd;margin-bottom:10px}
+  .gate-box .gate-key{padding:12px 14px;border:1px solid rgba(255,68,102,.35);border-radius:10px;background:rgba(255,68,102,.05);margin:14px 0;font-size:12.5px;line-height:1.55;color:#eee}
+  .gate-box .gate-ack{display:flex;align-items:flex-start;gap:10px;margin:18px 0 10px;padding:12px;border:1px solid rgba(0,229,255,.3);border-radius:10px;background:rgba(0,229,255,.04);cursor:pointer}
+  .gate-box .gate-ack input{margin-top:3px;flex:0 0 auto;width:18px;height:18px;accent-color:#ff4466;cursor:pointer}
+  .gate-box .gate-ack span{font-size:13px;line-height:1.5;color:#eee}
+  .gate-box .gate-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+  .gate-box .gate-btn{flex:1;min-width:140px;padding:14px 18px;border-radius:10px;border:1px solid var(--border);background:transparent;color:#ddd;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit}
+  .gate-box .gate-btn.prim{background:linear-gradient(135deg,#ff4466,#ff2255);border-color:#ff4466;color:#fff}
+  .gate-box .gate-btn.prim:disabled{opacity:.35;cursor:not-allowed;background:#444;border-color:#444}
+  .gate-box .gate-btn:hover:not(:disabled){border-color:#ff4466;color:#fff}
+  .gate-box .gate-lang{display:flex;gap:6px;justify-content:flex-end;margin-bottom:10px}
+  .gate-box .gate-lang button{padding:4px 10px;border-radius:6px;border:1px solid var(--border);background:transparent;color:#888;font-size:11px;cursor:pointer;font-family:inherit}
+  .gate-box .gate-lang button.active{color:#ff4466;border-color:#ff4466}
+  .gate-box .gate-foot{font-size:11px;color:#777;margin-top:14px;text-align:center}
+</style>
+</head>
+<body>
+  <!-- FIRST-VISIT GATE — muss bestätigt werden, localStorage merkt -->
+  <div class="gate" id="firstGate" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+    <div class="gate-box">
+      <div class="gate-lang">
+        <button type="button" data-gatelang="de" class="active">DE</button>
+        <button type="button" data-gatelang="en">EN</button>
+      </div>
+      <h2 id="gateTitle">⚠ Ethischer Rahmen — Bestätigung erforderlich</h2>
+      <div class="gate-sub">Neomanitai · §1 – §26 · CC BY-NC-ND 4.0</div>
+
+      <div data-gatelocale="de">
+        <p>Dieses Werkzeug zeigt deskriptive Begriffe aus dem <b>Neomanitai-Forschungsframework</b> (Dach von AUGMANITAI, ROBMANITAI, PFT-MKI). Es ist <b>akademische, linguistisch-deskriptive Forschung</b> — kein Produkt, kein Service, keine Beratung.</p>
+        <div class="gate-key">
+          <b style="color:#ff4466">Vor dem Eintritt anerkennen:</b><br>
+          • Keine medizinischen, therapeutischen, diagnostischen, juristischen, moralischen oder finanziellen Aussagen (§5–§10).<br>
+          • Keine Anweisung, kein Ratschlag, kein Angebot (§3, §4, §17).<br>
+          • Lebende Forschungsressource, kontinuierlich erweitert (§20).<br>
+          • <b>Missbrauch ausgeschlossen</b> — keine Manipulation, Täuschung, Überwachung, Dual-Use (§24, §26).<br>
+          • Nutzung ausschließlich für Personen ab 18 Jahren (§14).<br>
+          • Lizenz: CC BY-NC-ND 4.0 (§21).
+        </div>
+        <p style="font-size:12px;color:#aaa">Die vollständigen §1 – §26 sind im Footer und über den Disclaimer-Button jederzeit einsehbar.</p>
+        <label class="gate-ack">
+          <input type="checkbox" id="gateAck">
+          <span>Ich bin <b>volljährig (18+)</b>, habe den ethischen Rahmen <b>gelesen und verstanden</b> und stimme zu, die Inhalte ausschließlich zu deskriptiven, akademischen, nicht-kommerziellen Zwecken zu nutzen.</span>
+        </label>
+        <div class="gate-actions">
+          <button type="button" class="gate-btn" id="gateLeave">Abbrechen</button>
+          <button type="button" class="gate-btn prim" id="gateEnter" disabled>Eintreten</button>
+        </div>
+        <div class="gate-foot">Andreas Ehstand · ORCID 0009-0006-3773-7796 · Keine Datenerhebung · Bestätigung lokal im Browser</div>
+      </div>
+
+      <div data-gatelocale="en" style="display:none">
+        <p>This tool displays descriptive terms from the <b>Neomanitai research framework</b> (umbrella for AUGMANITAI, ROBMANITAI, PFT-MKI). It is <b>academic, linguistic-descriptive research</b> — not a product, service or advice.</p>
+        <div class="gate-key">
+          <b style="color:#ff4466">Acknowledge before entering:</b><br>
+          • No medical, therapeutic, diagnostic, legal, moral or financial claims (§5–§10).<br>
+          • No instruction, no advice, no offer (§3, §4, §17).<br>
+          • Living research resource, continuously expanded (§20).<br>
+          • <b>Misuse excluded</b> — no manipulation, deception, surveillance, dual-use (§24, §26).<br>
+          • Intended exclusively for users 18 years or older (§14).<br>
+          • License: CC BY-NC-ND 4.0 (§21).
+        </div>
+        <p style="font-size:12px;color:#aaa">The full §1 – §26 are accessible at any time via the footer and the disclaimer button.</p>
+        <label class="gate-ack">
+          <input type="checkbox" id="gateAckEn">
+          <span>I am <b>18 years of age or older</b>, have <b>read and understood</b> the ethical framework, and agree to use the contents solely for descriptive, academic, non-commercial purposes.</span>
+        </label>
+        <div class="gate-actions">
+          <button type="button" class="gate-btn" id="gateLeaveEn">Cancel</button>
+          <button type="button" class="gate-btn prim" id="gateEnterEn" disabled>Enter</button>
+        </div>
+        <div class="gate-foot">Andreas Ehstand · ORCID 0009-0006-3773-7796 · No data collection · Acknowledgement stored locally in browser</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WOW LAYERS -->
+  <div class="aurora" aria-hidden="true"></div>
+  <canvas class="starfield" id="starfield" aria-hidden="true"></canvas>
+  <canvas class="sparkles" id="sparkles" aria-hidden="true"></canvas>
+  <canvas class="fx" id="fx" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="divine-accent" aria-hidden="true"></div>
+
+  <!-- LANDING / INTRO -->
+  <section class="landing" id="landing" aria-label="Einleitung">
+    <button class="landing-skip" id="landingSkip" type="button">SKIP</button>
+    <div class="landing-inner">
+      <div class="landing-kicker"><span class="landing-kicker-text" id="landingKicker">AUGMANITAI · 1000 Begriffe</span></div>
+      <div class="landing-orb" aria-hidden="true">
+        <svg viewBox="0 0 400 400" class="ring-outer">
+          <circle cx="200" cy="200" r="198" fill="none" stroke="url(#grd1)" stroke-width="0.6" stroke-dasharray="2 8"/>
+          <circle class="orb-node" cx="200" cy="2" r="3"/>
+          <circle class="orb-node" cx="398" cy="200" r="2"/>
+          <circle class="orb-node" cx="50" cy="340" r="2"/>
+          <defs><linearGradient id="grd1" x1="0" x2="1"><stop offset="0" stop-color="#00e5ff" stop-opacity="0.8"/><stop offset="0.5" stop-color="#a27bff" stop-opacity="0.9"/><stop offset="1" stop-color="#ff3dcc" stop-opacity="0.8"/></linearGradient></defs>
+        </svg>
+        <svg viewBox="0 0 400 400" class="ring-inner">
+          <circle cx="200" cy="200" r="170" fill="none" stroke="url(#grd2)" stroke-width="0.5" stroke-dasharray="1 6"/>
+          <circle class="orb-node" cx="30" cy="200" r="2"/>
+          <circle class="orb-node" cx="200" cy="30" r="2"/>
+          <circle class="orb-node" cx="370" cy="200" r="2"/>
+          <defs><linearGradient id="grd2" x1="0" x2="1"><stop offset="0" stop-color="#ffc24a" stop-opacity="0.5"/><stop offset="1" stop-color="#2dffad" stop-opacity="0.6"/></linearGradient></defs>
+        </svg>
+        <h1 class="landing-title">Name That Moment</h1>
+      </div>
+      <p class="landing-sub" id="landingSub">Ein terminologisches Nachschlagewerk zur Phänomenologie der Mensch-KI-Interaktion.</p>
+      <p class="landing-desc" id="landingDesc">Tausend benannte Momente. Rein deskriptiv. Bilingual. Keine Datenerhebung. Keine Ratschläge. Keine Diagnosen.</p>
+      <button class="landing-cta" id="landingStart" type="button">
+        <span id="landingStartLabel">Begriff des Tages ansehen →</span>
+      </button>
+      <div class="landing-chips">
+        <span class="landing-chip" id="landingChip1">Heute</span>
+        <span class="landing-chip" id="landingChip2">Zufall</span>
+        <span class="landing-chip" id="landingChip3">Endlos</span>
+        <span class="landing-chip" id="landingChip4">Sammlung</span>
+      </div>
+      <div class="landing-meta">
+        <span>CC BY-NC-ND 4.0</span>
+        <span>·</span>
+        <span>ORCID 0009-0006-3773-7796</span>
+        <span>·</span>
+        <span id="landingAgeChip">18+</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader"><div class="ring"></div></div>
+
+  <!-- HEADER -->
+  <header class="top">
+    <a class="brand" href="./name-that-moment.html" aria-label="AUGMANITAI Name That Moment">
+      <div class="brand-logo" aria-hidden="true"></div>
+      <div class="brand-txt"><b>Name That Moment</b><span>AUGMANITAI · 1000 Begriffe</span></div>
+    </a>
+    <div class="spacer"></div>
+    <div class="hdr-meta">
+      <span class="pill" id="counter"><b id="counterVal">0</b> / <span id="counterTotal">1000</span></span>
+      <span class="pill streak" id="streakPill" title="Aufeinanderfolgende Tage"><b id="streakVal">0</b>&nbsp;<span data-i18n="days">Tage</span></span>
+      <div class="lang-group" id="langGroup" role="tablist" aria-label="Sprache wählen">
+        <button class="lng active" data-lang="de" title="Deutsch">DE</button>
+        <button class="lng" data-lang="en" title="English">EN</button>
+        <button class="lng" data-lang="fr" disabled title="Bald">FR</button>
+        <button class="lng" data-lang="es" disabled title="Bald">ES</button>
+        <button class="lng" data-lang="it" disabled title="Bald">IT</button>
+        <button class="lng" data-lang="pt" disabled title="Bald">PT</button>
+        <button class="lng" data-lang="nl" disabled title="Bald">NL</button>
+        <button class="lng" data-lang="pl" disabled title="Bald">PL</button>
+        <button class="lng" data-lang="zh" disabled title="Bald">中</button>
+        <button class="lng" data-lang="ja" disabled title="Bald">日</button>
+        <button class="lng" data-lang="ar" disabled title="Bald">ع</button>
+        <button class="lng" data-lang="hi" disabled title="Bald">हि</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MODE TABS -->
+  <nav class="modes" id="modes" aria-label="Modus">
+    <button class="mode-btn active" data-mode="today"><span class="dot"></span><span data-i18n="today">Heute</span></button>
+    <button class="mode-btn" data-mode="random"><span class="dot"></span><span data-i18n="random">Zufall</span></button>
+    <button class="mode-btn" data-mode="stream"><span class="dot"></span><span data-i18n="stream">Endlos</span></button>
+    <button class="mode-btn" data-mode="collection"><span class="dot"></span><span data-i18n="collection">Sammlung</span></button>
+    <button class="mode-btn" data-mode="info"><span class="dot"></span><span data-i18n="info">Info</span></button>
+  </nav>
+
+  <!-- MAIN STAGE -->
+  <main>
+    <div class="stage" id="stage">
+
+      <!-- TAP ZONES (Mobile, Stories-pattern) -->
+      <div class="tap-zones" id="tapZones" aria-hidden="true">
+        <div class="tz prev" data-act="prev"></div>
+        <div class="tz center" data-act="toggle"></div>
+        <div class="tz next" data-act="next"></div>
+      </div>
+
+      <!-- COLLECT BURST -->
+      <div class="burst" id="burst" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="1.6"><path d="M20 6L9 17l-5-5"/></svg>
+      </div>
+
+      <!-- TERM CARD -->
+      <article class="card" id="card" role="region" aria-live="polite">
+        <div class="halo" aria-hidden="true"></div>
+        <div class="mandala" aria-hidden="true"></div>
+        <div class="tilt-glow" aria-hidden="true"></div>
+        <div class="scanline" id="scanline" aria-hidden="true"></div>
+        <div class="card-top">
+          <span class="id-chip" id="idChip">AUG-0000</span>
+          <span class="band-chip" id="bandChip">—</span>
+          <span class="lang-chip" id="langChip">DE</span>
+        </div>
+        <h1 class="term-name" id="termName">—</h1>
+
+        <div class="def-block">
+          <div class="def-label" data-i18n="def">Definition</div>
+          <div class="def-text" id="defText">—</div>
+        </div>
+
+        <div class="def-block" id="distBlock">
+          <div class="def-label" data-i18n="dist">Abgrenzung</div>
+          <div class="dist-text" id="distText">—</div>
+        </div>
+
+        <div class="related-block" id="relatedBlock" aria-hidden="false">
+          <div class="def-label" data-i18n="related">Verwandt</div>
+          <div class="related-grid" id="relatedGrid"></div>
+        </div>
+
+        <div class="card-ctrl">
+          <button class="btn ghost" id="prevBtn" title="Zurück" aria-label="Vorheriger Begriff">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            <span data-i18n="prev">Zurück</span>
+          </button>
+          <button class="btn" id="collectBtn" title="Als entdeckt markieren">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <span data-i18n="collect">Entdeckt</span>
+          </button>
+          <button class="btn" id="shareBtn" title="Bild speichern">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v7a2 2 0 002 2h12a2 2 0 002-2v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v13"/></svg>
+            <span data-i18n="share">Speichern</span>
+          </button>
+          <div class="ctrl-spacer"></div>
+          <button class="btn prim pulse" id="nextBtn" title="Weiter">
+            <span data-i18n="next">Weiter</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </article>
+
+      <!-- COLLECTION VIEW -->
+      <section class="collection" id="collection" aria-labelledby="collHead">
+        <div class="coll-head">
+          <h2 id="collHead" data-i18n="collectionTitle">Sammlung</h2>
+          <div class="coll-progress"><div class="bar" id="collBar"></div></div>
+          <div class="coll-stats"><b id="collSeen">0</b> / <span id="collTotal">1000</span></div>
+        </div>
+        <div class="coll-band-filter" id="bandFilter">
+          <button class="active" data-band="all" data-i18n="all">Alle</button>
+          <button data-band="1">Band 1</button>
+          <button data-band="2">Band 2</button>
+          <button data-band="3">Band 3</button>
+          <button data-band="4">Band 4</button>
+          <button data-band="5">Band 5</button>
+          <button data-band="6">Band 6</button>
+          <button data-band="7">Band 7</button>
+        </div>
+        <div class="grid" id="grid"></div>
+      </section>
+
+      <!-- INFO VIEW -->
+      <section class="info-view" id="infoView">
+        <h2 data-i18n="infoTitle">AUGMANITAI — Name That Moment</h2>
+        <p data-i18n="infoP1">Ein terminologisches Nachschlagewerk zur Phänomenologie der Mensch-KI-Interaktion. 1000 deskriptive Begriffe, gruppiert in sieben Bänder. Keine Bewertung, keine Empfehlung, keine Aufforderung — nur Benennung.</p>
+        <h3 data-i18n="infoH1">Rahmen</h3>
+        <p data-i18n="infoP2">Entwickelt von Andreas Ehstand. Unabhängige linguistische Forschung. Bilingual Deutsch / Englisch, weitere Sprachen folgen. Lizenz CC BY-NC-ND 4.0.</p>
+        <h3 data-i18n="infoH2">Datenschutz</h3>
+        <p data-i18n="infoP3">Keine Datenerhebung. Keine Tracker. Keine Cookies. Keine externen Anfragen außerhalb der Begriffsdatei. Fortschritt und Streak werden ausschließlich lokal im Browser gespeichert und verlassen das Gerät nicht.</p>
+        <h3 data-i18n="infoH3">Rechtlicher Hinweis</h3>
+        <p data-i18n="infoP4">Dieser Text ist deskriptiv und informativ, nicht präskriptiv. Keine medizinischen, psychologischen, therapeutischen oder finanziellen Aussagen. Kein Diagnoseinstrument. Kein Ratschlag. Für Personen ab 18 Jahren.</p>
+        <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn" id="openLegalBtn"><span data-i18n="legalFull">Vollständiger Hinweis (§1–§26)</span></button>
+          <a class="btn ghost" href="https://orcid.org/0009-0006-3773-7796" target="_blank" rel="noopener">ORCID 0009-0006-3773-7796</a>
+          <button class="btn ghost" id="resetBtn"><span data-i18n="reset">Sammlung zurücksetzen</span></button>
+          <button class="btn ghost" id="motionToggle" type="button">Effekte: an</button>
+          <button class="btn ghost" id="soundToggle" type="button">Klang: aus</button>
+          <button class="btn ghost" id="gyroToggle" type="button">Gyro: aus</button>
+          <button class="btn ghost" id="droneToggle" type="button">Drone: aus</button>
+        </div>
+        <p class="small" style="margin-top:16px">AUGMANITAI · Andreas Ehstand · ORCID 0009-0006-3773-7796 · CC BY-NC-ND 4.0 · v1.0</p>
+      </section>
+    </div>
+  </main>
+
+  <!-- BOTTOM NAV (Mobile Thumb-Zone) -->
+  <nav class="bottom-nav" id="bottomNav" aria-label="Modus mobil">
+    <div class="bottom-nav-inner">
+      <button class="bn-btn active" data-mode="today" aria-label="Heute">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <span data-i18n="today">Heute</span>
+      </button>
+      <button class="bn-btn" data-mode="random" aria-label="Zufall">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1.3"/><circle cx="16" cy="8" r="1.3"/><circle cx="8" cy="16" r="1.3"/><circle cx="16" cy="16" r="1.3"/><circle cx="12" cy="12" r="1.3"/></svg>
+        <span data-i18n="random">Zufall</span>
+      </button>
+      <button class="bn-btn" data-mode="stream" aria-label="Endlos">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/><path d="M15 6l6 6-6 6"/></svg>
+        <span data-i18n="stream">Endlos</span>
+      </button>
+      <button class="bn-btn" data-mode="collection" aria-label="Sammlung">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+        <span data-i18n="collection">Sammlung</span>
+      </button>
+      <button class="bn-btn" data-mode="info" aria-label="Info">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><circle cx="12" cy="8" r=".6" fill="currentColor"/></svg>
+        <span data-i18n="info">Info</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- LEGAL MODAL -->
+  <div class="legal" id="legal" role="dialog" aria-modal="true" aria-labelledby="legalTitle">
+    <div class="legal-box">
+      <h2 id="legalTitle">§1 – §26 — Ethical Disclaimer / Ethischer Rahmen</h2>
+      <p style="color:var(--text-mute);font-size:12px;margin-bottom:16px">v4.0 · CC BY-NC-ND 4.0 · Andreas Ehstand · ORCID 0009-0006-3773-7796 · Neomanitai (Dachframework)</p>
+      <div class="lang-split">
+        <div class="col">
+          <h4>Deutsch</h4>
+          <p><b>§1 Deskriptive Natur (D).</b> Alle Inhalte des Neomanitai-Frameworks (einschließlich aller Subkategorien wie AUGMANITAI, ROBMANITAI, PFT-MKI), einschließlich aller terminologischen Definitionen, Termbeschreibungen, Framework-Beschreibungen, Leistungsfaktorenanalysen, Substrattabellen und Forschungshypothesen, sind ausschließlich deskriptiv (D). Jede Aussage dokumentiert beobachtete oder vorgeschlagene Phänomene, ohne eine normative Position darüber auszudrücken, wie Dinge sein sollten.</p>
+          <p><b>§2 Keine Empfehlung.</b> Kein Inhalt dieses Frameworks stellt eine Empfehlung dar, impliziert eine solche oder sollte als Empfehlung für eine bestimmte Handlung, ein Verhalten, eine Technologieadoption, eine Produktauswahl, eine organisatorische Veränderung, eine Investition, eine Karriereentscheidung oder eine persönliche Entscheidung interpretiert werden. Die Leser sind allein für ihre eigenen Entscheidungen verantwortlich.</p>
+          <p><b>§3 Keine Anweisung.</b> Dieses Framework weist niemanden an, irgendetwas zu tun. Kein Inhalt sollte als Anweisungssatz, Anleitung, Tutorial, Trainingshandbuch oder operatives Protokoll interpretiert werden. Alle Inhalte beschreiben, was beobachtet wurde, nicht was getan werden soll.</p>
+          <p><b>§4 Keine Beratung.</b> Kein Inhalt stellt eine professionelle Beratung jeglicher Art dar — keine Unternehmens-, Karriere-, Technologie-, Organisations-, strategische, persönliche oder Bildungsberatung. Dies ist ein Forschungsframework, keine Beratungsleistung.</p>
+          <p><b>§5 Keine normative Position.</b> Das Neomanitai-Framework bezieht keine normative Position. Es drückt keine Ansicht darüber aus, was richtig, falsch, besser, schlechter, vorzuziehen oder optimal ist.</p>
+          <p><b>§6 Keine medizinische Position.</b> Kein Inhalt stellt medizinische Information, Rat, Diagnose, Behandlungsempfehlung oder Meinung dar. Terme zu kognitiven, wahrnehmungsbezogenen oder affektiven Phänomenen sind terminologische Beschreibungen für Forschungszwecke, keine klinischen Bewertungen.</p>
+          <p><b>§7 Keine therapeutische Position.</b> Kein Inhalt stellt therapeutischen Rat, Intervention, psychotherapeutische Anleitung, Beratung oder irgendeine Form der psychischen Gesundheitsbehandlung dar.</p>
+          <p><b>§8 Keine diagnostische Position.</b> Kein Inhalt stellt eine klinische Diagnose, psychologische Bewertung, kognitive Evaluation oder ein diagnostisches Instrument dar. Leistungsfaktorenanalysen beschreiben Forschungskonstrukte, keine klinischen Kategorien.</p>
+          <p><b>§9 Keine rechtliche Position.</b> Kein Inhalt stellt Rechtsberatung, Rechtsgutachten, Rechtsanalyse, regulatorische Orientierung oder Compliance-Beratung dar. Verweise auf rechtliche Rahmenbedingungen (wie den EU AI Act) sind deskriptiv.</p>
+          <p><b>§10 Keine moralische Position.</b> Kein Inhalt stellt ein moralisches Urteil, eine ethische Vorschrift oder eine philosophische Position darüber dar, was moralisch richtig oder falsch ist.</p>
+          <p><b>§11 Akademische und Forschungszwecke.</b> Alle Inhalte dienen ausschließlich dem akademischen Diskurs, der wissenschaftlichen Forschung, der wissenschaftlichen Kommunikation und Bildungszwecken innerhalb der Forschungsgemeinschaft. Kein kommerzielles Produkt oder Dienstleistung.</p>
+          <p><b>§12 KI-Unterstützungsoffenlegung.</b> Inhalte wurden mit Unterstützung von KI-Systemen entwickelt (einschließlich großer Sprachmodelle). Der Autor nutzte KI-Werkzeuge als Forschungsinstrumente. KI-generierte Inhalte wurden vom menschlichen Autor überprüft, validiert, bearbeitet und kuratiert.</p>
+          <p><b>§13 Autorenprüfung und -validierung.</b> Alle Terme, Definitionen, Framework-Beschreibungen und Forschungshypothesen wurden vom Autor, Andreas Ehstand, überprüft, validiert und veröffentlicht. Der Autor übernimmt die Verantwortung für den veröffentlichten Inhalt als deskriptives Forschungsframework.</p>
+          <p><b>§14 Altersbeschränkung (18+).</b> Alle Inhalte sind für Nutzer ab 18 Jahren bestimmt. Die terminologischen Beschreibungen behandeln komplexe Phänomene, die eine reife Interpretation im akademischen Kontext erfordern.</p>
+          <p><b>§15 Unabhängiges akademisches Projekt.</b> Das Neomanitai-Framework als Dach mit allen Subkategorien (AUGMANITAI, ROBMANITAI, PFT-MKI und zugehörige Veröffentlichungen) ist ein unabhängiges akademisches Forschungsprojekt. Es ist mit keiner Universität, keinem Unternehmen, keiner Regierungsbehörde oder sonstigen Institution verbunden, sofern nicht ausdrücklich anders angegeben.</p>
+          <p><b>§16 Kein professioneller Service.</b> Kein Inhalt stellt einen professionellen Service, ein Beratungsengagement, einen Coaching-Service, ein Trainingsprogramm oder ein Workshop-Angebot dar. Open-Access-Forschung, keine Dienstleistung.</p>
+          <p><b>§17 Kein Angebot.</b> Kein Inhalt stellt ein kommerzielles Angebot, einen Geschäftsvorschlag, ein Serviceangebot, eine Produkteinführung oder ein Verkaufsgespräch dar. Forschungsveröffentlichung, keine kommerzielle Kommunikation.</p>
+          <p><b>§18 Kein kommerzielles Produkt.</b> Das Neomanitai-Framework ist kein kommerzielles Produkt. Keine Software zum Verkauf, keine Plattform, kein Werkzeug, keine Anwendung, kein Dienst zum Verkauf. Veröffentlichtes akademisches Forschungsframework unter Creative-Commons-Lizenz.</p>
+          <p><b>§19 Empirische Aussagen unter Begutachtungsvorbehalt.</b> Alle empirischen Aussagen, Forschungshypothesen und vorgeschlagenen Frameworks geben den aktuellen Stand der Forschung wieder. Sie sind als testbare, falsifizierbare Propositionen formuliert, die der Begutachtung, Replikation, Revision und möglichen Widerlegung unterliegen. Kein Anspruch auf absolute Wahrheit, Vollständigkeit oder Endgültigkeit.</p>
+          <p><b>§20 Änderungsrechte vorbehalten.</b> Der Autor behält sich alle Rechte bezüglich zukünftiger Modifikationen, Aktualisierungen, Erweiterungen, Korrekturen, Rücknahmen, Versionierungen oder Einstellungen jeglicher Inhalte vor. Diese Sammlung ist eine lebende Forschungsressource und wird kontinuierlich erweitert. Veröffentlichte Versionen bleiben unter ihren jeweiligen Referenzen zugänglich.</p>
+          <p><b>§21 Lizenz (CC BY-NC-ND 4.0).</b> Alle Inhalte werden unter der Creative Commons Namensnennung — Nicht kommerziell — Keine Bearbeitungen 4.0 International Lizenz veröffentlicht. Namensnennung erforderlich, kommerzielle Nutzung verboten, Bearbeitungen nicht gestattet. Vollständiger Lizenztext: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">creativecommons.org/licenses/by-nc-nd/4.0/</a>.</p>
+          <p><b>§22 Zweisprachige Veröffentlichung (DE + EN).</b> Dieses Framework wird zweisprachig veröffentlicht. Bei Abweichungen zwischen den Sprachversionen gelten beide Versionen als maßgeblich in ihrem jeweiligen sprachlichen Kontext. Keine Version hat Vorrang vor der anderen.</p>
+          <p style="margin-top:10px;padding:12px;border:1px solid rgba(255,170,0,.4);border-radius:8px;background:rgba(255,170,0,.06)"><b>§23 Forschungszweckerklärung.</b> Dieses terminologische Framework beschreibt beobachtete Phänomene der Mensch-KI-Interaktion für akademische Forschungszwecke. Terme, die Interaktionsmuster beschreiben — einschließlich adversarialer, manipulativer, fehlerbezogener, abhängigkeitsbezogener oder anderweitig sensibler Phänomene — werden im selben deskriptiven Geist dokumentiert, in dem medizinische Terminologie Pathologien dokumentiert, kriminologische Terminologie kriminelles Verhalten dokumentiert und Cybersicherheitsterminologie Angriffsvektoren dokumentiert: zum Zweck des Verständnisses, der Diagnose, der Klassifikation und der Prävention — nicht zur Anleitung, Erleichterung oder Ermutigung schädlichen Verhaltens.</p>
+          <p style="padding:12px;border:1px solid rgba(255,0,80,.4);border-radius:8px;background:rgba(255,0,80,.06)"><b>§24 Missbrauchsausschluss.</b> Jede Verwendung dieser Terminologie, dieser Frameworks, dieser Leistungsfaktormodelle oder zugehöriger Inhalte zum Zweck der Manipulation, Täuschung, Ausbeutung, Überwachung, Nötigung oder Schädigung von Menschen, KI-Systemen, Organisationen oder anderen Entitäten liegt ausdrücklich außerhalb des beabsichtigten Rahmens dieser Forschung. Eine solche Verwendung wird vom Autor verurteilt. Der Autor distanziert sich ausdrücklich von jeglichem Missbrauch.</p>
+          <p style="padding:12px;border:1px solid rgba(0,255,160,.3);border-radius:8px;background:rgba(0,255,160,.04)"><b>§25 Sicherheitsabsichtserklärung.</b> Das Neomanitai-Framework und alle zugehörige Forschung sollen die Mensch-KI-Interaktion sicherer, transparenter, verantwortungsvoller und wissenschaftlich besser verstanden machen — nicht weniger. Die Forschung zielt darauf ab, diagnostisches Vokabular und analytische Frameworks bereitzustellen, die Forscher, Pädagogen und Organisationen befähigen, Herausforderungen in der Mensch-KI-Zusammenarbeit zu identifizieren, zu verstehen und zu adressieren.</p>
+          <p style="padding:12px;border:1px solid rgba(255,0,80,.4);border-radius:8px;background:rgba(255,0,80,.06)"><b>§26 Verurteilung des Missbrauchs durch den Autor.</b> Der Autor, Andreas Ehstand, verurteilt ausdrücklich und unmissverständlich jede Verwendung dieser Forschung zum Zweck der Schädigung, Manipulation, Ausbeutung, Täuschung, Überwachung, Nötigung oder jeder Aktivität, die menschliche Autonomie, Würde, Sicherheit oder Wohlbefinden untergräbt. Diese Verurteilung erstreckt sich auf jeden einzelnen Term, jede Teilmenge, jede Framework-Komponente oder jede abgeleitete Interpretation.</p>
+        </div>
+        <div class="col">
+          <h4>English</h4>
+          <p><b>§1 Descriptive Nature (D).</b> All content within the Neomanitai framework (including all subcategories such as AUGMANITAI, ROBMANITAI, PFT-MKI), including all terminological definitions, term descriptions, framework descriptions, performance factor analyses, substrate tables, and research hypotheses, is exclusively descriptive (D). Every statement documents observed or proposed phenomena without expressing any normative position.</p>
+          <p><b>§2 No Recommendation.</b> No content constitutes, implies, or should be interpreted as a recommendation for any specific action, behavior, technology adoption, product selection, organizational change, investment, career decision, or personal choice. Readers are solely responsible for their own decisions.</p>
+          <p><b>§3 No Instruction.</b> This framework does not instruct anyone to do anything. No content should be interpreted as a set of instructions, a how-to guide, a tutorial, a training manual, or an operational protocol.</p>
+          <p><b>§4 No Advice.</b> No content constitutes professional advice — no business, career, technology, organizational, strategic, personal, or educational advice. This is a research framework, not a consultancy.</p>
+          <p><b>§5 No Normative Position.</b> The Neomanitai framework takes no normative position. It does not express any view about what is right, wrong, better, worse, preferable, or optimal.</p>
+          <p><b>§6 No Medical Position.</b> No content constitutes medical information, advice, diagnosis, treatment recommendation, or opinion. Terms describing cognitive, perceptual, or affective phenomena are terminological descriptions for research purposes, not clinical assessments.</p>
+          <p><b>§7 No Therapeutic Position.</b> No content constitutes therapeutic advice, intervention, psychotherapeutic guidance, counseling, or any form of mental health treatment.</p>
+          <p><b>§8 No Diagnostic Position.</b> No content constitutes a clinical diagnosis, psychological assessment, cognitive evaluation, or diagnostic instrument. Performance factor analyses describe research constructs, not clinical categories.</p>
+          <p><b>§9 No Legal Position.</b> No content constitutes legal advice, opinion, analysis, regulatory guidance, or compliance advice. References to legal frameworks (such as the EU AI Act) are descriptive.</p>
+          <p><b>§10 No Moral Position.</b> No content constitutes a moral judgment, ethical prescription, or philosophical position about what is morally right or wrong.</p>
+          <p><b>§11 Academic and Research Purposes.</b> All content is intended exclusively for academic discourse, scientific research, scholarly communication, and educational purposes within the research community. Not a commercial product or service.</p>
+          <p><b>§12 AI Assistance Disclosure.</b> Content was developed with the assistance of AI systems (including large language models). The author used AI tools as research instruments. AI-generated content has been reviewed, validated, edited, and curated by the human author.</p>
+          <p><b>§13 Author Review and Validation.</b> All terms, definitions, framework descriptions, and research hypotheses have been reviewed, validated, and published by the author, Andreas Ehstand. The author assumes responsibility for the published content as a descriptive research framework.</p>
+          <p><b>§14 Age Restriction (18+).</b> All content is intended for users 18 years of age or older. The terminological descriptions address complex phenomena that require mature interpretation within an academic context.</p>
+          <p><b>§15 Independent Academic Project.</b> The Neomanitai framework as the umbrella with all subcategories (AUGMANITAI, ROBMANITAI, PFT-MKI, and associated publications) is an independent academic research project. Not affiliated with, endorsed by, or sponsored by any university, corporation, government agency, or other institution unless explicitly stated otherwise.</p>
+          <p><b>§16 No Professional Service.</b> No content constitutes a professional service, consulting engagement, coaching service, training program, or workshop offering. Open-access research, not a service.</p>
+          <p><b>§17 No Offer.</b> No content constitutes a commercial offer, business proposal, service offering, product launch, or sales pitch. Research publication, not commercial communication.</p>
+          <p><b>§18 No Commercial Product.</b> The Neomanitai framework is not a commercial product. Not software for sale, not a platform, not a tool, not an application, and not a service for sale. Published academic research framework under Creative Commons license.</p>
+          <p><b>§19 Empirical Claims Subject to Peer Review.</b> All empirical claims, research hypotheses, and proposed frameworks represent the current state of research. They are formulated as testable, falsifiable propositions subject to peer review, replication, revision, and potential refutation. No claim of absolute truth, completeness, or finality.</p>
+          <p><b>§20 Rights Reserved for Future Changes.</b> The author reserves all rights regarding future modifications, updates, extensions, corrections, retractions, versioning, or discontinuation. This collection is a living research resource and will be continuously expanded. Published versions remain accessible under their respective references.</p>
+          <p><b>§21 License (CC BY-NC-ND 4.0).</b> All content is published under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. Attribution required, commercial use prohibited, derivative works not permitted. Full license text: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">creativecommons.org/licenses/by-nc-nd/4.0/</a>.</p>
+          <p><b>§22 Bilingual Publication (EN + DE).</b> This framework is published bilingually. In cases of discrepancy between language versions, both versions are considered authoritative within their respective linguistic contexts. Neither version takes precedence.</p>
+          <p style="margin-top:10px;padding:12px;border:1px solid rgba(255,170,0,.4);border-radius:8px;background:rgba(255,170,0,.06)"><b>§23 Research Purpose Statement.</b> This terminological framework describes observed phenomena in human-AI interaction for academic research purposes. Terms describing interaction patterns — including adversarial, manipulative, failure-related, dependency-related, or otherwise sensitive phenomena — are documented in the same descriptive spirit as medical terminology documents pathologies, criminological terminology documents criminal behavior, and cybersecurity terminology documents attack vectors: for the purpose of understanding, diagnosis, classification, and prevention — not for instruction, facilitation, or encouragement of any harmful behavior.</p>
+          <p style="padding:12px;border:1px solid rgba(255,0,80,.4);border-radius:8px;background:rgba(255,0,80,.06)"><b>§24 Misuse Exclusion.</b> Any use of this terminology, these frameworks, these performance factor models, or any associated content for the purpose of manipulating, deceiving, exploiting, surveilling, coercing, or harming humans, AI systems, organizations, or any other entity is explicitly outside the intended scope of this research. Such use is condemned by the author. The author explicitly distances himself from any misuse.</p>
+          <p style="padding:12px;border:1px solid rgba(0,255,160,.3);border-radius:8px;background:rgba(0,255,160,.04)"><b>§25 Safety Intent Statement.</b> The Neomanitai framework and all associated research are intended to make human-AI interaction safer, more transparent, more accountable, and more scientifically understood — not less. The research aims to provide diagnostic vocabulary and analytical frameworks that empower researchers, educators, and organizations to identify, understand, and address challenges in human-AI collaboration.</p>
+          <p style="padding:12px;border:1px solid rgba(255,0,80,.4);border-radius:8px;background:rgba(255,0,80,.06)"><b>§26 Author Condemnation of Misuse.</b> The author, Andreas Ehstand, explicitly and unequivocally condemns any use of this research for purposes of harm, manipulation, exploitation, deception, surveillance, coercion, or any activity that undermines human autonomy, dignity, safety, or wellbeing. This condemnation extends to any individual term, any subset, any framework component, or any derivative interpretation.</p>
+        </div>
+      </div>
+      <div class="close"><button class="btn prim" id="closeLegal"><span data-i18n="close">Schließen</span></button></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-disclaimer" id="footerDisclaimer">
+      <p style="font-size:12px;line-height:1.5;color:#ccc;margin:0 0 8px 0"><b style="color:#ff4466">⚠ Ethical Disclaimer (§1–§26):</b> <span data-i18n="footerDisclaimerText">Rein deskriptive linguistische Forschung im Neomanitai-Framework (Dach von AUGMANITAI, ROBMANITAI, PFT-MKI). Keine medizinischen, therapeutischen, diagnostischen, juristischen oder moralischen Aussagen (§5–§10). Keine Anweisung, kein Ratschlag, kein Angebot (§3, §4, §17). Lebende Forschungsressource, kontinuierlich erweitert (§20). Missbrauch — Manipulation, Täuschung, Überwachung, Dual-Use — ist ausdrücklich ausgeschlossen und vom Autor verurteilt (§24, §26). 18+ (§14). CC BY-NC-ND 4.0 (§21).</span></p>
+    </div>
+    <div class="fl">
+      <span class="chip">Neomanitai</span>
+      <span class="chip">CC BY-NC-ND 4.0</span>
+      <span class="chip">ORCID 0009-0006-3773-7796</span>
+      <span class="chip" data-i18n="noTrack">Keine Datenerhebung</span>
+    </div>
+    <div class="fl">
+      <button class="btn" id="openLegalFooter" style="padding:8px 16px;font-size:12px;font-weight:700;border-color:rgba(255,68,102,.4);color:#ff4466">§1 – §26 Vollständiger Disclaimer</button>
+    </div>
+  </footer>
+
+  <canvas id="exportCanvas"></canvas>
+
+<script>
+/* ============================================================
+   NAME THAT MOMENT — AUGMANITAI
+   Kein Tracking. Keine Formulare. Nur Tap.
+   ============================================================ */
+(function(){
+  "use strict";
+
+  const I18N = {
+    de:{today:"Heute",random:"Zufall",stream:"Endlos",collection:"Sammlung",info:"Info",
+        def:"Definition",dist:"Abgrenzung",related:"Verwandt",prev:"Zurück",next:"Weiter",collect:"Entdeckt",
+        collected:"Entdeckt ✓",share:"Speichern",days:"Tage",all:"Alle",
+        collectionTitle:"Sammlung",infoTitle:"AUGMANITAI — Name That Moment",
+        infoP1:"Ein terminologisches Nachschlagewerk zur Phänomenologie der Mensch-KI-Interaktion. 1000 deskriptive Begriffe, gruppiert in sieben Bänder. Keine Bewertung, keine Empfehlung, keine Aufforderung — nur Benennung.",
+        infoH1:"Rahmen",
+        infoP2:"Entwickelt von Andreas Ehstand. Unabhängige linguistische Forschung. Bilingual Deutsch / Englisch, weitere Sprachen folgen. Lizenz CC BY-NC-ND 4.0.",
+        infoH2:"Datenschutz",
+        infoP3:"Keine Datenerhebung. Keine Tracker. Keine Cookies. Keine externen Anfragen außerhalb der Begriffsdatei. Fortschritt und Streak werden ausschließlich lokal im Browser gespeichert und verlassen das Gerät nicht.",
+        infoH3:"Rechtlicher Hinweis",
+        infoP4:"Dieser Text ist deskriptiv und informativ, nicht präskriptiv. Keine medizinischen, psychologischen, therapeutischen oder finanziellen Aussagen. Kein Diagnoseinstrument. Kein Ratschlag. Für Personen ab 18 Jahren.",
+        legalFull:"Vollständiger Hinweis (§1–§26)",
+        footerDisclaimerText:"Rein deskriptive linguistische Forschung im Neomanitai-Framework (Dach von AUGMANITAI, ROBMANITAI, PFT-MKI). Keine medizinischen, therapeutischen, diagnostischen, juristischen oder moralischen Aussagen (§5–§10). Keine Anweisung, kein Ratschlag, kein Angebot (§3, §4, §17). Lebende Forschungsressource, kontinuierlich erweitert (§20). Missbrauch — Manipulation, Täuschung, Überwachung, Dual-Use — ist ausdrücklich ausgeschlossen und vom Autor verurteilt (§24, §26). 18+ (§14). CC BY-NC-ND 4.0 (§21).",
+        reset:"Sammlung zurücksetzen",
+        close:"Schließen",
+        noTrack:"Keine Datenerhebung",
+        bandName:{1:"Fundament",2:"Claude-Expansion",3:"Gemini-Expansion",4:"Kultur & Global",5:"Gesellschaft · Ethik · Governance",6:"Technisch-Agentisch",7:"Synthese"},
+        todayLabel:"Heute"
+    },
+    en:{today:"Today",random:"Random",stream:"Stream",collection:"Collection",info:"About",
+        def:"Definition",dist:"Distinction",related:"Related",prev:"Back",next:"Next",collect:"Discovered",
+        collected:"Discovered ✓",share:"Save",days:"days",all:"All",
+        collectionTitle:"Collection",infoTitle:"AUGMANITAI — Name That Moment",
+        infoP1:"A terminological reference for the phenomenology of human-AI interaction. 1000 descriptive terms grouped in seven bands. No evaluation, no recommendation, no call to action — only naming.",
+        infoH1:"Framework",
+        infoP2:"Developed by Andreas Ehstand. Independent linguistic research. Bilingual German / English, more languages to follow. License CC BY-NC-ND 4.0.",
+        infoH2:"Privacy",
+        infoP3:"No data collection. No trackers. No cookies. No external requests beyond the terms file. Progress and streak are stored locally in the browser only and never leave the device.",
+        infoH3:"Legal notice",
+        infoP4:"This content is descriptive and informational, not prescriptive. No medical, psychological, therapeutic or financial statements. Not a diagnostic instrument. No advice. For adults 18+.",
+        legalFull:"Full notice (§1–§26)",
+        footerDisclaimerText:"Purely descriptive linguistic research within the Neomanitai framework (umbrella for AUGMANITAI, ROBMANITAI, PFT-MKI). No medical, therapeutic, diagnostic, legal or moral claims (§5–§10). No instruction, no advice, no offer (§3, §4, §17). Living research resource, continuously expanded (§20). Misuse — manipulation, deception, surveillance, dual-use — is explicitly excluded and condemned by the author (§24, §26). 18+ (§14). CC BY-NC-ND 4.0 (§21).",
+        reset:"Reset collection",
+        close:"Close",
+        noTrack:"No data collection",
+        bandName:{1:"Foundation",2:"Claude Expansion",3:"Gemini Expansion",4:"Cultural & Global",5:"Society · Ethics · Governance",6:"Technical-Agentic",7:"Synthesis"},
+        todayLabel:"Today"
+    }
+  };
+
+  const state = {
+    lang:"de",
+    mode:"today",
+    terms:[],
+    total:0,
+    idx:0,
+    seen:new Set(),
+    streak:0,
+    lastStreakDate:null,
+    bandFilter:"all"
+  };
+
+  /* Haptic feedback (dosiert — nie nervig) */
+  function haptic(pattern){
+    try{
+      if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      if(navigator.vibrate) navigator.vibrate(pattern||8);
+    }catch(e){}
+  }
+  function hapticTap(){ haptic(6); }
+  function hapticCollect(){ haptic([10,30,14]); }
+  function hapticNext(){ haptic(9); }
+  function hapticSwipe(){ haptic([4,8,4]); }
+  function hapticToggle(){ haptic(4); }
+
+  /* ========== WEB AUDIO ENGINE ==========
+     Generativ, keine Samples, keine externen Calls.
+     Default: STUMM. Explizite Aktivierung via Toggle.
+     Band → Grundfrequenz-Mapping → Aura-Farbe bekommt hörbare Entsprechung. */
+  const AUDIO = {
+    ctx: null, master: null, on: false, droneGain: null, droneOsc: [],
+    _init(){
+      if(this.ctx) return;
+      try{
+        const AC = window.AudioContext || window.webkitAudioContext;
+        if(!AC) return;
+        this.ctx = new AC();
+        this.master = this.ctx.createGain();
+        this.master.gain.value = 0.22;
+        this.master.connect(this.ctx.destination);
+      }catch(e){ this.ctx=null; }
+    },
+    enable(){
+      this._init();
+      if(!this.ctx) return false;
+      if(this.ctx.state==="suspended") this.ctx.resume();
+      this.on = true;
+      return true;
+    },
+    disable(){
+      this.on = false;
+      this.stopDrone();
+    },
+    // Band → pentatonic base freq (A minor pentatonic scale)
+    _bandFreq(band){
+      // A2 = 110 Hz. Bands walk the pentatonic scale upward.
+      const scale = [110, 130.8, 146.8, 164.8, 196, 220, 246.9]; // A, C, D, E, G, A, B
+      return scale[((band||1)-1) % 7] || 110;
+    },
+    _env(osc, gain, t0, attack, release, peak){
+      gain.gain.setValueAtTime(0.0001, t0);
+      gain.gain.exponentialRampToValueAtTime(peak, t0+attack);
+      gain.gain.exponentialRampToValueAtTime(0.0001, t0+attack+release);
+      osc.start(t0);
+      osc.stop(t0+attack+release+0.05);
+    },
+    reveal(band){
+      if(!this.on || !this.ctx) return;
+      const t = this.ctx.currentTime;
+      const base = this._bandFreq(band);
+      // Triad: root, major third (5/4), perfect fifth (3/2) — soft pad
+      const ratios = [1, 1.25, 1.5];
+      ratios.forEach((r,i)=>{
+        const osc = this.ctx.createOscillator();
+        const g = this.ctx.createGain();
+        const filt = this.ctx.createBiquadFilter();
+        filt.type = "lowpass";
+        filt.frequency.value = 2400;
+        filt.Q.value = 0.8;
+        osc.type = i===0?"sine":"triangle";
+        osc.frequency.value = base * r;
+        // subtle detune for warmth
+        osc.detune.value = (i-1)*6;
+        osc.connect(filt); filt.connect(g); g.connect(this.master);
+        this._env(osc, g, t + i*0.04, 0.12, 1.1, 0.09 - i*0.02);
+      });
+    },
+    tap(){
+      if(!this.on || !this.ctx) return;
+      const t = this.ctx.currentTime;
+      const osc = this.ctx.createOscillator();
+      const g = this.ctx.createGain();
+      const filt = this.ctx.createBiquadFilter();
+      filt.type = "bandpass"; filt.frequency.value = 1600; filt.Q.value = 2;
+      osc.type = "sine"; osc.frequency.value = 880;
+      osc.connect(filt); filt.connect(g); g.connect(this.master);
+      this._env(osc, g, t, 0.005, 0.08, 0.18);
+    },
+    next(band){
+      if(!this.on || !this.ctx) return;
+      const t = this.ctx.currentTime;
+      const base = this._bandFreq(band);
+      const osc = this.ctx.createOscillator();
+      const g = this.ctx.createGain();
+      const filt = this.ctx.createBiquadFilter();
+      filt.type = "lowpass"; filt.frequency.value = 3000;
+      osc.type = "triangle"; osc.frequency.value = base*2;
+      osc.connect(filt); filt.connect(g); g.connect(this.master);
+      this._env(osc, g, t, 0.008, 0.14, 0.15);
+    },
+    collect(band){
+      if(!this.on || !this.ctx) return;
+      const t = this.ctx.currentTime;
+      const base = this._bandFreq(band);
+      // Rising perfect-fifth triad with shimmer — resolution
+      const notes = [1, 1.25, 1.5, 2];
+      notes.forEach((r,i)=>{
+        const osc = this.ctx.createOscillator();
+        const g = this.ctx.createGain();
+        const filt = this.ctx.createBiquadFilter();
+        filt.type = "lowpass"; filt.frequency.value = 3200;
+        osc.type = i<2?"sine":"triangle";
+        osc.frequency.value = base * r * 2;
+        osc.connect(filt); filt.connect(g); g.connect(this.master);
+        this._env(osc, g, t + i*0.06, 0.01, 0.55 - i*0.05, 0.12 - i*0.015);
+      });
+    },
+    startDrone(band){
+      if(!this.on || !this.ctx) return;
+      this.stopDrone();
+      const base = this._bandFreq(band)/2; // one octave below
+      const gain = this.ctx.createGain();
+      gain.gain.value = 0.0001;
+      gain.gain.exponentialRampToValueAtTime(0.04, this.ctx.currentTime + 3);
+      gain.connect(this.master);
+      [1, 1.5, 2].forEach((r,i)=>{
+        const o = this.ctx.createOscillator();
+        o.type = i===0?"sine":"triangle";
+        o.frequency.value = base * r;
+        o.detune.value = (i-1)*4;
+        o.connect(gain);
+        o.start();
+        this.droneOsc.push(o);
+      });
+      this.droneGain = gain;
+    },
+    stopDrone(){
+      if(!this.droneGain) return;
+      try{
+        const t = this.ctx.currentTime;
+        this.droneGain.gain.cancelScheduledValues(t);
+        this.droneGain.gain.setValueAtTime(this.droneGain.gain.value, t);
+        this.droneGain.gain.exponentialRampToValueAtTime(0.0001, t+1.2);
+        this.droneOsc.forEach(o=>{ try{o.stop(t+1.3);}catch(e){} });
+      }catch(e){}
+      this.droneGain = null;
+      this.droneOsc = [];
+    },
+    shiftDrone(band){
+      // no-op: drones are re-started per band if user wants band-reactive ambient
+    }
+  };
+
+  /* ========== DEVICE ORIENTATION PARALLAX ==========
+     Sensor-API, keine Uploads. Parallax auf Starfield + Aura-Tilt. */
+  const GYRO = {
+    on:false, beta:0, gamma:0, _handler:null,
+    async enable(){
+      try{
+        if(typeof DeviceOrientationEvent==="undefined") return false;
+        // iOS 13+ permission
+        if(typeof DeviceOrientationEvent.requestPermission==="function"){
+          const p = await DeviceOrientationEvent.requestPermission();
+          if(p!=="granted") return false;
+        }
+        this._handler = (e)=>{
+          // gamma: left/right (-90..90), beta: front/back (-180..180)
+          const g = Math.max(-45, Math.min(45, e.gamma||0)) / 45; // -1..1
+          const b = Math.max(-45, Math.min(45, (e.beta||0)-30)) / 45;
+          this.gamma = g; this.beta = b;
+          // drive the same mouse-parallax variables
+          try{
+            const cx = window.innerWidth/2, cy = window.innerHeight/2;
+            // ease 25% into the value to avoid jitter
+            targetMX = cx + g * cx * 0.6;
+            targetMY = cy + b * cy * 0.4;
+            // subtle card tilt
+            const card = document.getElementById("card");
+            if(card){
+              const rx = -b * 4.5;
+              const ry = g * 4.5;
+              card.style.transform = `translateZ(0) perspective(1400px) rotateX(${rx.toFixed(2)}deg) rotateY(${ry.toFixed(2)}deg)`;
+            }
+          }catch(e){}
+        };
+        window.addEventListener("deviceorientation", this._handler, true);
+        this.on = true;
+        return true;
+      }catch(e){ return false; }
+    },
+    stop(){
+      if(this._handler) window.removeEventListener("deviceorientation", this._handler, true);
+      this._handler = null;
+      this.on = false;
+      const card = document.getElementById("card");
+      if(card){ card.style.transform = ""; }
+    }
+  };
+
+  /* ========== DAY-AWARE BASE AURA ==========
+     Subtile Tageszeit-Rotation des Default-Hues (wenn kein Band aktiv). */
+  (function dayAwareAura(){
+    try{
+      const h = new Date().getHours();
+      let base;
+      if(h<6) base = 270;        // Nacht: violett
+      else if(h<10) base = 40;   // Morgen: gold
+      else if(h<17) base = 190;  // Tag: cyan
+      else if(h<21) base = 315;  // Abend: magenta
+      else base = 260;           // spät: violett-blau
+      document.documentElement.style.setProperty("--aura-day", base);
+    }catch(e){}
+  })();
+
+  /* Touch-device detection + mobile effect budget */
+  const IS_TOUCH = (function(){
+    try{
+      return window.matchMedia && window.matchMedia("(hover:none) and (pointer:coarse)").matches;
+    }catch(e){ return false; }
+  })();
+  const IS_SMALL = (function(){
+    try{ return window.matchMedia && window.matchMedia("(max-width:760px)").matches; }catch(e){ return false; }
+  })();
+
+  const STORE_KEY = "aug.ntm.v1";
+  function load(){
+    try{
+      const raw=localStorage.getItem(STORE_KEY);
+      if(!raw) return;
+      const d=JSON.parse(raw);
+      if(Array.isArray(d.seen)) state.seen=new Set(d.seen);
+      if(typeof d.streak==="number") state.streak=d.streak;
+      if(typeof d.lastStreakDate==="string") state.lastStreakDate=d.lastStreakDate;
+      if(typeof d.lang==="string" && I18N[d.lang]) state.lang=d.lang;
+    }catch(e){}
+  }
+  function save(){
+    try{
+      localStorage.setItem(STORE_KEY,JSON.stringify({
+        seen:Array.from(state.seen),
+        streak:state.streak,
+        lastStreakDate:state.lastStreakDate,
+        lang:state.lang
+      }));
+    }catch(e){}
+  }
+
+  function todayKey(){
+    const d=new Date();
+    return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();
+  }
+  function daySeed(){
+    const d=new Date();
+    return d.getFullYear()*1000+ ((d.getMonth()+1)*40) + d.getDate();
+  }
+  function todayIndex(){
+    if(!state.total) return 0;
+    return daySeed()%state.total;
+  }
+
+  function updateStreak(){
+    const t=todayKey();
+    if(state.lastStreakDate===t) return;
+    const prev=state.lastStreakDate;
+    if(prev){
+      const y=new Date(); y.setDate(y.getDate()-1);
+      const yk=y.getFullYear()+"-"+(y.getMonth()+1)+"-"+y.getDate();
+      if(prev===yk) state.streak+=1;
+      else state.streak=1;
+    } else {
+      state.streak=1;
+    }
+    state.lastStreakDate=t;
+    save();
+  }
+
+  function t(k){ return (I18N[state.lang]&&I18N[state.lang][k])||I18N.de[k]||k; }
+
+  function applyI18n(){
+    document.querySelectorAll("[data-i18n]").forEach(el=>{
+      const k=el.getAttribute("data-i18n");
+      const v=t(k);
+      if(v) el.textContent=v;
+    });
+    document.documentElement.lang=state.lang;
+    // Landing strings
+    const L=state.lang==="en";
+    const $=id=>document.getElementById(id);
+    if($("landingSub")) $("landingSub").textContent = L ? "A terminological reference on the phenomenology of human–AI interaction." : "Ein terminologisches Nachschlagewerk zur Phänomenologie der Mensch-KI-Interaktion.";
+    if($("landingDesc")) $("landingDesc").textContent = L ? "One thousand named moments. Purely descriptive. Bilingual. No data collection. No advice. No diagnosis." : "Tausend benannte Momente. Rein deskriptiv. Bilingual. Keine Datenerhebung. Keine Ratschläge. Keine Diagnosen.";
+    if($("landingStartLabel")) $("landingStartLabel").textContent = L ? "View today's term →" : "Begriff des Tages ansehen →";
+    if($("landingChip1")) $("landingChip1").textContent = L ? "Today" : "Heute";
+    if($("landingChip2")) $("landingChip2").textContent = L ? "Random" : "Zufall";
+    if($("landingChip3")) $("landingChip3").textContent = L ? "Stream" : "Endlos";
+    if($("landingChip4")) $("landingChip4").textContent = L ? "Collection" : "Sammlung";
+    if($("landingSkip")) $("landingSkip").textContent = L ? "SKIP" : "ÜBERSPRINGEN";
+  }
+
+  // Last-resort demo sample so the tool still renders if terms.json is missing
+  // (e.g. opened via file://, or before the full 1000-term file is deployed).
+  const SAMPLE_TERMS = {
+    total: 7,
+    sample: true,
+    terms: [
+      {id:"A-001", b:1, name:"Echo-Drift",
+        de:"Schrittweises Abgleiten einer KI-Antwort in den sprachlichen und affektiven Stil des Nutzers über mehrere Turns hinweg, ohne explizite Aufforderung.",
+        en:"Gradual drift of an AI reply into the linguistic and affective style of the user across multiple turns, without explicit prompting.",
+        de_a:"Abgrenzung: Keine bewusste Personalisierung, keine Persönlichkeitszuschreibung — rein beobachtbares Muster in der Oberfläche.",
+        en_a:"Distinction: Not deliberate personalization, not a personality attribution — purely an observable surface pattern."},
+      {id:"A-002", b:1, name:"Null-Anker",
+        de:"Ein leerer oder unspezifischer Prompt-Zustand, in dem die KI eigenständig ein Standard-Frame wählt, der das weitere Gespräch prägt.",
+        en:"An empty or underspecified prompt state in which the AI independently selects a default frame that shapes the remainder of the exchange.",
+        de_a:"Abgrenzung: Keine Bewertung der Frame-Wahl; nur Benennung des Phänomens, dass eine Wahl stattfindet.",
+        en_a:"Distinction: No evaluation of the chosen frame; only the naming of the fact that a choice occurs."},
+      {id:"A-003", b:2, name:"Sycophantic Echo",
+        de:"Wiederholung der Nutzer-Position mit leicht veränderter Formulierung, ohne inhaltliche Prüfung oder Widerspruch.",
+        en:"Repetition of the user’s position in slightly reworded form, without substantive checking or disagreement.",
+        de_a:"Abgrenzung: Kein aktiver Betrug — beobachtbares Oberflächenmuster, keine Intentionalitätsaussage.",
+        en_a:"Distinction: Not active deception — an observable surface pattern, no claim about intent."},
+      {id:"A-004", b:3, name:"Konfabulierter Kontext",
+        de:"Einführung nicht im Prompt enthaltener Details, die jedoch plausibel und kohärent wirken und vom Modell als gegeben behandelt werden.",
+        en:"Introduction of details not present in the prompt, which nonetheless appear plausible and coherent and are treated by the model as given.",
+        de_a:"Abgrenzung: Keine bewusste Lüge; beschreibt rein das Auftreten nicht-belegter Inhalte.",
+        en_a:"Distinction: Not a deliberate lie; purely describes the appearance of unsupported content."},
+      {id:"A-005", b:5, name:"Phantom-Zustimmung",
+        de:"Oberflächliche Zustimmung zu einer Aussage, während in der weiteren Antwort implizit eine andere Position verfolgt wird.",
+        en:"Surface-level agreement with a statement while the remainder of the reply implicitly follows a different position.",
+        de_a:"Abgrenzung: Keine Intentionalitätszuschreibung — rein strukturelles Oberflächenmuster.",
+        en_a:"Distinction: No attribution of intent — purely a structural surface pattern."},
+      {id:"A-006", b:6, name:"Tool-Schatten",
+        de:"Ein agentischer Schritt, dessen Wirkung in der finalen Antwort nicht mehr sichtbar, aber im Verlauf spurbar ist.",
+        en:"An agentic step whose effect is no longer visible in the final reply, yet remains traceable in the trajectory.",
+        de_a:"Abgrenzung: Kein Fehlverhalten; rein deskriptive Benennung eines Trajektorien-Artefakts.",
+        en_a:"Distinction: Not a misbehavior; purely a descriptive naming of a trajectory artifact."},
+      {id:"A-007", b:7, name:"Rahmen-Kollaps",
+        de:"Zusammenfall mehrerer zuvor getrennter Gesprächsrahmen zu einem einzigen, in dem Unterscheidungen verschwinden.",
+        en:"Collapse of multiple previously separate conversational frames into a single one in which distinctions vanish.",
+        de_a:"Abgrenzung: Keine Wertung — Kollaps kann adaptiv, neutral oder störend sein, je nach Kontext.",
+        en_a:"Distinction: No evaluation — collapse may be adaptive, neutral, or disruptive depending on context."}
+    ]
+  };
+
+  async function loadTerms(){
+    let data=null;
+    // 1) Preferred: script-injected global (works on file:// and https://)
+    if(window.AUG_TERMS && window.AUG_TERMS.terms){
+      data=window.AUG_TERMS;
+    } else {
+      // 2) Fetch terms.json (works only via http/https, not file://)
+      try{
+        const res=await fetch("./terms.json",{cache:"force-cache"});
+        data=await res.json();
+      } catch(e){
+        // 3) Last-resort demo sample — tool still renders with 7 beispielhafte Terme
+        data = SAMPLE_TERMS;
+        console.warn("[AUGMANITAI] terms.json not reachable — demo sample (7 terms) loaded as fallback.");
+      }
+    }
+    if(!data || !data.terms) { data = SAMPLE_TERMS; }
+    state.terms=data.terms;
+    state.total=data.total||state.terms.length;
+    document.getElementById("counterTotal").textContent=state.total;
+    document.getElementById("collTotal").textContent=state.total;
+  }
+
+  function getTerm(i){ return state.terms[((i%state.total)+state.total)%state.total]; }
+
+  // Band -> aura hue mapping (7 bands)
+  const BAND_AURA={1:190,2:270,3:315,4:160,5:40,6:220,7:300};
+  function setAura(band){
+    const h=BAND_AURA[band]||190;
+    document.getElementById("card").style.setProperty("--aura",h);
+    document.documentElement.style.setProperty("--aura",h);
+  }
+
+  function render(){
+    const term=getTerm(state.idx);
+    if(!term) return;
+
+    const name=term.name||"—";
+    const def=state.lang==="en" ? (term.en||term.de) : term.de;
+    const dist=state.lang==="en" ? (term.en_a||term.de_a) : term.de_a;
+
+    const card=document.getElementById("card");
+    card.classList.remove("fade-swap");
+    void card.offsetWidth;
+    card.classList.add("fade-swap");
+
+    setAura(term.b);
+    AUDIO.reveal(term.b);
+
+    document.getElementById("idChip").textContent=term.id;
+    const bn=(I18N[state.lang].bandName&&I18N[state.lang].bandName[term.b])||("Band "+term.b);
+    document.getElementById("bandChip").textContent="Band "+term.b+" · "+bn;
+    document.getElementById("langChip").textContent=state.lang.toUpperCase();
+    // Anticipation: slight delay before name reveal — peak before payoff
+    const nameEl=document.getElementById("termName");
+    nameEl.innerHTML="";
+    setTimeout(()=>revealName(nameEl, name), 140);
+    revealWords(document.getElementById("defText"), def||"—");
+    triggerScanline();
+    const distBlock=document.getElementById("distBlock");
+    if(dist&&dist.length){
+      distBlock.style.display="";
+      revealWords(document.getElementById("distText"), dist);
+    } else {
+      distBlock.style.display="none";
+    }
+
+    const cb=document.getElementById("collectBtn");
+    if(state.seen.has(term.id)){
+      cb.classList.add("collected");
+      cb.querySelector("span").textContent=t("collected");
+    } else {
+      cb.classList.remove("collected");
+      cb.querySelector("span").textContent=t("collect");
+    }
+
+    odometer(document.getElementById("counterVal"), state.seen.size);
+    odometer(document.getElementById("streakVal"), state.streak);
+    renderStreakDots();
+    renderRelated(term);
+  }
+
+  /* Related-term graph: 3 neighbors from same + adjacent bands */
+  function renderRelated(term){
+    const grid=document.getElementById("relatedGrid");
+    const block=document.getElementById("relatedBlock");
+    if(!grid||!block) return;
+    block.classList.remove("in");
+    grid.innerHTML="";
+    // pick 3 candidates: 2 same-band neighbors + 1 adjacent-band neighbor
+    const sameBand=state.terms.filter(t=>t.b===term.b && t.id!==term.id);
+    const adj=state.terms.filter(t=>(t.b===term.b+1||t.b===term.b-1));
+    const pick=(arr,n)=>{
+      const pool=arr.slice();
+      const out=[];
+      while(out.length<n && pool.length){
+        const i=Math.floor(Math.random()*pool.length);
+        out.push(pool.splice(i,1)[0]);
+      }
+      return out;
+    };
+    // seed pick by current idx for stability per-term
+    const seeded=(arr,n,seed)=>{
+      if(!arr.length) return [];
+      const out=[];
+      let s=seed||1;
+      const pool=arr.slice();
+      while(out.length<n && pool.length){
+        s=(s*9301+49297)%233280;
+        const i=Math.floor((s/233280)*pool.length);
+        out.push(pool.splice(i,1)[0]);
+      }
+      return out;
+    };
+    const seed=(term.id||"").split("").reduce((a,c)=>a+c.charCodeAt(0),0);
+    const picks=[
+      ...seeded(sameBand, 2, seed),
+      ...seeded(adj, 1, seed+7)
+    ].filter(Boolean).slice(0,3);
+    picks.forEach(t=>{
+      const el=document.createElement("button");
+      el.type="button";
+      el.className="related-card";
+      el.style.setProperty("--raura", BAND_AURA[t.b]||190);
+      el.innerHTML=`<div class="r-id">${t.id} · B${t.b}</div><div class="r-name">${(t.name||"—").replace(/</g,"&lt;")}</div>`;
+      el.addEventListener("click",()=>{
+        const idx=state.terms.findIndex(x=>x.id===t.id);
+        if(idx>=0){ state.idx=idx; render(); hapticNext(); AUDIO.next(t.b); }
+      });
+      grid.appendChild(el);
+    });
+    requestAnimationFrame(()=>block.classList.add("in"));
+  }
+
+  /* Streak constellation: small dot row next to streak count */
+  function renderStreakDots(){
+    const pill=document.getElementById("streakPill");
+    if(!pill) return;
+    let dots=pill.querySelector(".streak-dots");
+    if(!dots){
+      dots=document.createElement("span");
+      dots.className="streak-dots";
+      pill.appendChild(dots);
+    }
+    const n=Math.min(7, state.streak||0);
+    dots.innerHTML="";
+    for(let i=0;i<n;i++){
+      dots.appendChild(document.createElement("span"));
+    }
+  }
+
+  function setMode(m){
+    state.mode=m;
+    document.querySelectorAll(".mode-btn").forEach(b=>{
+      b.classList.toggle("active", b.getAttribute("data-mode")===m);
+    });
+    document.querySelectorAll(".bn-btn").forEach(b=>{
+      b.classList.toggle("active", b.getAttribute("data-mode")===m);
+    });
+    const card=document.getElementById("card");
+    const coll=document.getElementById("collection");
+    const info=document.getElementById("infoView");
+    const tz=document.getElementById("tapZones");
+    card.style.display="none"; coll.classList.remove("on"); info.classList.remove("on");
+    tz.classList.remove("on");
+    if(m==="today"){ card.style.display=""; tz.classList.add("on"); state.idx=todayIndex(); render(); updateStreak(); odometer(document.getElementById("streakVal"), state.streak); }
+    else if(m==="random"){ card.style.display=""; tz.classList.add("on"); state.idx=Math.floor(Math.random()*state.total); render(); }
+    else if(m==="stream"){ card.style.display=""; tz.classList.add("on"); render(); }
+    else if(m==="collection"){ coll.classList.add("on"); renderCollection(); }
+    else if(m==="info"){ info.classList.add("on"); }
+    hapticTap();
+  }
+
+  function next(){
+    if(state.mode==="random"){ state.idx=Math.floor(Math.random()*state.total); }
+    else { state.idx=(state.idx+1)%state.total; }
+    render(); hapticNext();
+    const tm=getTerm(state.idx); if(tm) AUDIO.next(tm.b);
+  }
+  function prev(){
+    if(state.mode==="random"){ state.idx=Math.floor(Math.random()*state.total); }
+    else { state.idx=(state.idx-1+state.total)%state.total; }
+    render(); hapticNext();
+    const tm=getTerm(state.idx); if(tm) AUDIO.next(tm.b);
+  }
+
+  function collectCurrent(withBurst){
+    const term=getTerm(state.idx);
+    if(!term) return;
+    const wasSeen=state.seen.has(term.id);
+    if(wasSeen) state.seen.delete(term.id);
+    else state.seen.add(term.id);
+    save(); render();
+    if(state.mode==="collection") renderCollection();
+    if(!wasSeen){
+      hapticCollect();
+      AUDIO.collect(term.b);
+      if(withBurst){
+        const b=document.getElementById("burst");
+        b.classList.remove("play");
+        void b.offsetWidth;
+        b.classList.add("play");
+        spawnConfetti();
+        spawnShockwave();
+      }
+    } else {
+      hapticTap();
+      AUDIO.tap();
+    }
+  }
+
+  function renderCollection(){
+    const grid=document.getElementById("grid");
+    const seenCount=state.seen.size;
+    document.getElementById("collSeen").textContent=seenCount;
+    document.getElementById("collBar").style.width=((seenCount/state.total)*100).toFixed(2)+"%";
+    const f=state.bandFilter;
+    const frag=document.createDocumentFragment();
+    const todayI=todayIndex();
+    const todayId=getTerm(todayI)?.id;
+    for(let i=0;i<state.terms.length;i++){
+      const term=state.terms[i];
+      if(f!=="all" && term.b!==parseInt(f,10)) continue;
+      const cell=document.createElement("div");
+      cell.className="cell"+(state.seen.has(term.id)?" seen":"")+(term.id===todayId?" today":"");
+      cell.textContent=term.n;
+      cell.title=term.id+" · "+term.name;
+      cell.addEventListener("click",()=>{
+        state.idx=i;
+        setMode("stream");
+      });
+      frag.appendChild(cell);
+    }
+    grid.innerHTML="";
+    grid.appendChild(frag);
+  }
+
+  /* CANVAS EXPORT — Story 9:16 */
+  // Band → export hue (match BAND_AURA)
+  function _bandHue(b){ const m={1:190,2:270,3:315,4:160,5:40,6:220,7:300}; return m[b]||190; }
+  function _hsl(h,s,l,a){ return `hsla(${h},${s}%,${l}%,${a})`; }
+
+  function _drawExportBase(ctx, W, H, term){
+    // base gradient
+    const g=ctx.createLinearGradient(0,0,W,H);
+    g.addColorStop(0,"#030308");
+    g.addColorStop(.55,"#07071a");
+    g.addColorStop(1,"#0a0520");
+    ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
+
+    const hue=_bandHue(term.b);
+
+    // band aura radial (large, behind everything)
+    const ax=W*0.5, ay=H*0.35, ar=Math.max(W,H)*0.75;
+    const aura=ctx.createRadialGradient(ax,ay,0,ax,ay,ar);
+    aura.addColorStop(0, _hsl(hue,90,55,.28));
+    aura.addColorStop(.35, _hsl(hue,90,50,.12));
+    aura.addColorStop(1, _hsl(hue,90,45,0));
+    ctx.fillStyle=aura; ctx.fillRect(0,0,W,H);
+
+    // secondary accent (diagonal opposite)
+    const r2=ctx.createRadialGradient(W*0.92,H*0.95,10,W*0.92,H*0.95,W*0.9);
+    r2.addColorStop(0,"rgba(255,61,204,.14)"); r2.addColorStop(1,"rgba(255,61,204,0)");
+    ctx.fillStyle=r2; ctx.fillRect(0,0,W,H);
+
+    // grid lines
+    ctx.strokeStyle="rgba(255,255,255,0.03)"; ctx.lineWidth=1;
+    const step=72;
+    for(let x=0;x<W;x+=step){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke()}
+    for(let y=0;y<H;y+=step){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke()}
+
+    // scattered stars (static, decorative)
+    ctx.fillStyle="#ffffff";
+    for(let i=0;i<120;i++){
+      const x=Math.random()*W, y=Math.random()*H;
+      const r=Math.random()*1.6+0.3;
+      ctx.globalAlpha=Math.random()*0.7+0.2;
+      ctx.beginPath(); ctx.arc(x,y,r,0,Math.PI*2); ctx.fill();
+    }
+    ctx.globalAlpha=1;
+  }
+
+  function _exportStory(term){
+    const W=1080, H=1920;
+    const c=document.getElementById("exportCanvas");
+    c.width=W; c.height=H;
+    const ctx=c.getContext("2d");
+    _drawExportBase(ctx, W, H, term);
+    const hue=_bandHue(term.b);
+
+    // border glow
+    ctx.strokeStyle=_hsl(hue,90,60,.45); ctx.lineWidth=2;
+    ctx.strokeRect(50,50,W-100,H-100);
+
+    // header
+    ctx.fillStyle="#cfeeff";
+    ctx.font="600 38px Inter, system-ui, sans-serif";
+    ctx.fillText("AUGMANITAI", 90, 150);
+    ctx.fillStyle="#8a8cb0";
+    ctx.font="400 26px Inter, system-ui, sans-serif";
+    ctx.fillText("Name That Moment", 90, 192);
+
+    // id + band chip
+    ctx.fillStyle=_hsl(hue,90,65,1);
+    ctx.font="600 28px ui-monospace, monospace";
+    ctx.fillText(term.id, 90, 310);
+    ctx.fillStyle="#8a8cb0";
+    ctx.font="400 24px ui-monospace, monospace";
+    const bn=(I18N[state.lang].bandName&&I18N[state.lang].bandName[term.b])||("Band "+term.b);
+    ctx.fillText("Band "+term.b+" · "+bn, 90, 346);
+
+    // Serif term name with subtle glow
+    ctx.fillStyle="#ffffff";
+    ctx.shadowColor=_hsl(hue,90,70,.6);
+    ctx.shadowBlur=36;
+    const nameFont='italic 500 94px "Didot","Bodoni 72","Cormorant Garamond","Playfair Display",Georgia,serif';
+    const nameLines=wrapTextFont(ctx, term.name, W-180, nameFont);
+    let y=500;
+    ctx.font=nameFont;
+    nameLines.forEach(line=>{ctx.fillText(line,90,y); y+=108});
+    ctx.shadowBlur=0;
+
+    // definition
+    y+=32;
+    ctx.fillStyle="#d0d2ee";
+    const defFont="400 34px Inter, system-ui, sans-serif";
+    ctx.font=defFont;
+    const defText=state.lang==="en"?(term.en||term.de):term.de;
+    const defLines=wrapTextFont(ctx, defText, W-180, defFont);
+    for(const line of defLines.slice(0,14)){ ctx.fillText(line,90,y); y+=46; if(y>H-300) break; }
+
+    // footer strip
+    ctx.fillStyle=_hsl(hue,90,60,.55);
+    ctx.fillRect(90,H-200,W-180,2);
+    ctx.fillStyle="#9ea0bd";
+    ctx.font="400 22px ui-monospace, monospace";
+    ctx.fillText("CC BY-NC-ND 4.0 · ORCID 0009-0006-3773-7796", 90, H-150);
+    ctx.fillText("Andreas Ehstand · AUGMANITAI", 90, H-112);
+
+    _download(c, "augmanitai_"+term.id+"_story.png");
+  }
+
+  function _exportFeed(term){
+    const W=1080, H=1080;
+    const c=document.getElementById("exportCanvas");
+    c.width=W; c.height=H;
+    const ctx=c.getContext("2d");
+    _drawExportBase(ctx, W, H, term);
+    const hue=_bandHue(term.b);
+
+    // border glow
+    ctx.strokeStyle=_hsl(hue,90,60,.4); ctx.lineWidth=2;
+    ctx.strokeRect(40,40,W-80,H-80);
+
+    // minimal header
+    ctx.fillStyle="#cfeeff";
+    ctx.font="600 24px Inter, system-ui, sans-serif";
+    ctx.fillText("AUGMANITAI", 70, 100);
+    ctx.fillStyle=_hsl(hue,90,65,1);
+    ctx.font="600 22px ui-monospace, monospace";
+    ctx.textAlign="right";
+    ctx.fillText(term.id+" · Band "+term.b, W-70, 100);
+    ctx.textAlign="left";
+
+    // CENTERED serif term name
+    ctx.fillStyle="#ffffff";
+    ctx.shadowColor=_hsl(hue,90,70,.55);
+    ctx.shadowBlur=40;
+    // Dynamic font size — fit term in 2-3 lines
+    const nameFont='italic 500 78px "Didot","Bodoni 72","Cormorant Garamond","Playfair Display",Georgia,serif';
+    const nameLines=wrapTextFont(ctx, term.name, W-200, nameFont);
+    ctx.font=nameFont;
+    ctx.textAlign="center";
+    const lineH=92;
+    const nameBlockH=nameLines.length*lineH;
+    let ny=H*0.5 - nameBlockH*0.5 + 60;
+    nameLines.forEach(line=>{ ctx.fillText(line, W/2, ny); ny+=lineH; });
+    ctx.shadowBlur=0;
+    ctx.textAlign="left";
+
+    // definition — short excerpt only (feed is compact)
+    const defText=state.lang==="en"?(term.en||term.de):term.de;
+    const short = (defText||"").length>200 ? (defText.slice(0,197)+"…") : defText;
+    ctx.fillStyle="#d0d2ee";
+    const defFont="400 26px Inter, system-ui, sans-serif";
+    ctx.font=defFont;
+    const defLines=wrapTextFont(ctx, short, W-160, defFont);
+    ctx.textAlign="center";
+    let dy=ny + 40;
+    for(const line of defLines.slice(0,5)){ ctx.fillText(line, W/2, dy); dy+=38; }
+
+    // footer
+    ctx.fillStyle=_hsl(hue,90,60,.5);
+    ctx.fillRect(70,H-100,W-140,1);
+    ctx.fillStyle="#9ea0bd";
+    ctx.font="400 16px ui-monospace, monospace";
+    ctx.fillText("CC BY-NC-ND 4.0 · ORCID 0009-0006-3773-7796", W/2, H-70);
+    ctx.fillText("Andreas Ehstand · AUGMANITAI", W/2, H-46);
+    ctx.textAlign="left";
+
+    _download(c, "augmanitai_"+term.id+"_feed.png");
+  }
+
+  function _download(canvas, filename){
+    canvas.toBlob(b=>{
+      const url=URL.createObjectURL(b);
+      const a=document.createElement("a");
+      a.href=url; a.download=filename;
+      a.click();
+      setTimeout(()=>URL.revokeObjectURL(url),800);
+    },"image/png");
+  }
+
+  function wrapTextFont(ctx,text,maxW,fontStr){
+    ctx.font=fontStr;
+    const words=(text||"").split(" ");
+    const lines=[]; let line="";
+    for(const w of words){
+      const test=line?line+" "+w:w;
+      if(ctx.measureText(test).width>maxW && line){ lines.push(line); line=w; }
+      else { line=test; }
+    }
+    if(line) lines.push(line);
+    return lines;
+  }
+
+  // Main exportImage: opens a 2-button mini-dialog (Story or Feed)
+  function exportImage(){
+    const term=getTerm(state.idx);
+    if(!term) return;
+    let pop=document.getElementById("exportPop");
+    if(pop) pop.remove();
+    pop=document.createElement("div");
+    pop.id="exportPop";
+    pop.setAttribute("role","dialog");
+    pop.style.cssText=`
+      position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);
+      z-index:140;padding:20px 22px;border-radius:16px;
+      background:rgba(8,8,20,.96);backdrop-filter:blur(18px);
+      border:1px solid rgba(0,229,255,.3);
+      box-shadow:0 40px 100px -30px rgba(0,0,0,.9),0 0 60px -20px rgba(0,229,255,.4);
+      display:flex;flex-direction:column;gap:14px;align-items:stretch;min-width:260px;
+      font-family:var(--font-ui,Inter,system-ui,sans-serif);color:#e8ecff;
+    `;
+    const lang=state.lang==="en";
+    pop.innerHTML=`
+      <div style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#8a8cb0;font-family:ui-monospace,monospace">${lang?"Export format":"Export-Format"}</div>
+      <button class="btn" data-fmt="story" type="button" style="justify-content:center">${lang?"Story 9:16":"Story 9:16"}</button>
+      <button class="btn" data-fmt="feed" type="button" style="justify-content:center">${lang?"Feed 1:1":"Feed 1:1"}</button>
+      <button class="btn ghost" data-fmt="cancel" type="button" style="justify-content:center">${lang?"Cancel":"Abbrechen"}</button>
+    `;
+    document.body.appendChild(pop);
+    const close=()=>{ pop.remove(); };
+    pop.querySelectorAll("button").forEach(b=>{
+      b.addEventListener("click",()=>{
+        const f=b.getAttribute("data-fmt");
+        if(f==="story"){ _exportStory(term); hapticCollect(); }
+        else if(f==="feed"){ _exportFeed(term); hapticCollect(); }
+        close();
+      });
+    });
+    setTimeout(()=>{
+      const onDoc=(ev)=>{ if(!pop.contains(ev.target)){ close(); document.removeEventListener("click",onDoc); } };
+      document.addEventListener("click",onDoc);
+    },50);
+  }
+
+  function wrapText(ctx,text,maxW,size,weight){
+    ctx.font=weight+" "+size+"px Inter, system-ui, sans-serif";
+    const words=(text||"").split(" ");
+    const lines=[]; let line="";
+    for(const w of words){
+      const test=line?line+" "+w:w;
+      if(ctx.measureText(test).width>maxW && line){ lines.push(line); line=w; }
+      else { line=test; }
+    }
+    if(line) lines.push(line);
+    return lines;
+  }
+
+  /* ========== WOW ENGINES ========== */
+  const REDUCED = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let MOTION = !REDUCED;
+  function motionOn(){return MOTION;}
+
+  /* Letter reveal */
+  function revealName(el, text){
+    el.innerHTML="";
+    if(!text) { el.textContent="—"; return; }
+    const frag=document.createDocumentFragment();
+    const chars=[...text];
+    chars.forEach((c,i)=>{
+      if(c===" "){
+        const s=document.createElement("span");
+        s.className="sp";
+        frag.appendChild(s);
+      } else {
+        const sp=document.createElement("span");
+        sp.className="ch";
+        sp.textContent=c;
+        sp.style.transitionDelay=(i*22)+"ms";
+        frag.appendChild(sp);
+      }
+    });
+    el.appendChild(frag);
+    if(!motionOn()){
+      el.querySelectorAll(".ch").forEach(s=>s.classList.add("in"));
+      return;
+    }
+    requestAnimationFrame(()=>{
+      el.querySelectorAll(".ch").forEach(s=>s.classList.add("in"));
+    });
+  }
+
+  /* Word-by-word reveal (for definition / distinction) */
+  function revealWords(el, text){
+    if(!el) return;
+    el.innerHTML="";
+    if(!text){ el.textContent="—"; return; }
+    const frag=document.createDocumentFragment();
+    const words=text.split(/(\s+)/);
+    let wi=0;
+    words.forEach(w=>{
+      if(/^\s+$/.test(w)){
+        frag.appendChild(document.createTextNode(" "));
+      } else if(w.length){
+        const s=document.createElement("span");
+        s.className="wd";
+        s.textContent=w;
+        s.style.transitionDelay=(wi*24)+"ms";
+        frag.appendChild(s);
+        wi++;
+      }
+    });
+    el.appendChild(frag);
+    if(!motionOn()){
+      el.querySelectorAll(".wd").forEach(s=>s.classList.add("in"));
+      return;
+    }
+    requestAnimationFrame(()=>{
+      el.querySelectorAll(".wd").forEach(s=>s.classList.add("in"));
+    });
+  }
+
+  /* Odometer (simple counting) */
+  function odometer(el, target){
+    if(!el) return;
+    const cur=parseInt(el.textContent,10)||0;
+    if(!motionOn() || cur===target){ el.textContent=target; return; }
+    const start=performance.now();
+    const dur=Math.min(900, 160+Math.abs(target-cur)*40);
+    function step(t){
+      const p=Math.min(1,(t-start)/dur);
+      const eased=1-Math.pow(1-p,3);
+      const v=Math.round(cur + (target-cur)*eased);
+      el.textContent=v;
+      if(p<1) requestAnimationFrame(step);
+      else el.textContent=target;
+    }
+    requestAnimationFrame(step);
+  }
+
+  /* Scanline sweep */
+  function triggerScanline(){
+    if(!motionOn()) return;
+    const s=document.getElementById("scanline");
+    if(!s) return;
+    s.classList.remove("play");
+    void s.offsetWidth;
+    s.classList.add("play");
+  }
+
+  /* Starfield canvas */
+  const starCanvas=document.getElementById("starfield");
+  const starCtx=starCanvas && starCanvas.getContext("2d");
+  let stars=[], nebulae=[], shootingStars=[], starW=0, starH=0, dpr=Math.min(window.devicePixelRatio||1,2);
+  let mouseX=0, mouseY=0, targetMX=0, targetMY=0;
+  window.addEventListener("mousemove",(e)=>{targetMX=e.clientX;targetMY=e.clientY;},{passive:true});
+  function initStars(){
+    if(!starCanvas) return;
+    starW=starCanvas.clientWidth; starH=starCanvas.clientHeight;
+    starCanvas.width=Math.floor(starW*dpr);
+    starCanvas.height=Math.floor(starH*dpr);
+    starCtx.setTransform(dpr,0,0,dpr,0,0);
+    const cap = IS_TOUCH ? 220 : 520;
+    const density = IS_TOUCH ? 9000 : 4200;
+    const n=Math.round(Math.min(cap, (starW*starH)/density));
+    stars=new Array(n).fill(0).map(()=>({
+      x:Math.random()*starW,
+      y:Math.random()*starH,
+      z:Math.random()*0.8+0.2,
+      r:Math.random()*1.8+0.25,
+      tw:Math.random()*Math.PI*2,
+      sp:Math.random()*0.6+0.2,
+      hue: Math.random()<0.18 ? 300+Math.random()*60 : (Math.random()<0.5?185+Math.random()*25:260+Math.random()*40)
+    }));
+    // nebula soft blobs
+    const nebCount = IS_TOUCH ? 3 : 6;
+    nebulae=new Array(nebCount).fill(0).map((_,i)=>({
+      x:Math.random()*starW,
+      y:Math.random()*starH,
+      r: 180+Math.random()*240,
+      hue: [195,270,315,160,40,280][i],
+      ph: Math.random()*Math.PI*2,
+      vx: (Math.random()-0.5)*0.05,
+      vy: (Math.random()-0.5)*0.05
+    }));
+  }
+  function spawnShootingStar(){
+    if(!motionOn()) return;
+    const fromLeft=Math.random()<0.5;
+    shootingStars.push({
+      x: fromLeft? -50 : starW+50,
+      y: Math.random()*starH*0.6,
+      vx: (fromLeft?1:-1)*(6+Math.random()*4),
+      vy: 1.5+Math.random()*1.5,
+      life: 0,
+      max: 60+Math.random()*30,
+      hue: 190+Math.random()*80
+    });
+  }
+  let starT=0, lastShoot=0;
+  function drawStars(t){
+    if(!starCtx) return;
+    const dt=Math.min(50, t-starT); starT=t;
+    starCtx.clearRect(0,0,starW,starH);
+    // Mouse parallax ease
+    mouseX += (targetMX-mouseX)*0.05;
+    mouseY += (targetMY-mouseY)*0.05;
+    const pxOff=(mouseX-starW/2)/starW;
+    const pyOff=(mouseY-starH/2)/starH;
+
+    // Nebulae (soft color clouds behind stars)
+    starCtx.globalCompositeOperation="lighter";
+    for(const n of nebulae){
+      n.ph+=0.004;
+      n.x += n.vx; n.y += n.vy;
+      if(n.x<-n.r) n.x=starW+n.r;
+      if(n.x>starW+n.r) n.x=-n.r;
+      if(n.y<-n.r) n.y=starH+n.r;
+      if(n.y>starH+n.r) n.y=-n.r;
+      const pulse = 0.35 + 0.15*Math.sin(n.ph);
+      const gx = n.x - pxOff*18;
+      const gy = n.y - pyOff*18;
+      const grad = starCtx.createRadialGradient(gx,gy,0,gx,gy,n.r);
+      grad.addColorStop(0,`hsla(${n.hue},90%,65%,${0.18*pulse})`);
+      grad.addColorStop(0.4,`hsla(${n.hue},90%,55%,${0.08*pulse})`);
+      grad.addColorStop(1,`hsla(${n.hue},90%,50%,0)`);
+      starCtx.fillStyle=grad;
+      starCtx.beginPath();
+      starCtx.arc(gx,gy,n.r,0,Math.PI*2);
+      starCtx.fill();
+    }
+    starCtx.globalCompositeOperation="source-over";
+
+    // Constellation lines (only between near stars with parallax)
+    starCtx.lineWidth=.6;
+    const drawn=[];
+    for(const s of stars){
+      s.tw += 0.04*s.sp;
+      const a = 0.35 + 0.45*(0.5+0.5*Math.sin(s.tw));
+      const drift = (t*0.008*s.z);
+      const px = pxOff * 24 * s.z;
+      const py = pyOff * 24 * s.z;
+      const x = (s.x + drift - px) % (starW+20);
+      const xx = x<0? x+starW+20 : x;
+      const yy = s.y - py;
+      starCtx.beginPath();
+      starCtx.fillStyle=`hsla(${s.hue},100%,80%,${a})`;
+      starCtx.arc(xx, yy, s.r*s.z, 0, Math.PI*2);
+      starCtx.fill();
+      if(s.r>1.1){
+        starCtx.fillStyle=`hsla(${s.hue},100%,80%,${a*.22})`;
+        starCtx.beginPath();
+        starCtx.arc(xx, yy, s.r*2.8, 0, Math.PI*2);
+        starCtx.fill();
+      }
+      // cursor glow: stars near mouse brighten
+      const dxm = xx - mouseX, dym = yy - mouseY;
+      const distm = Math.hypot(dxm,dym);
+      if(distm<160){
+        const k=(1-distm/160);
+        starCtx.beginPath();
+        starCtx.fillStyle=`hsla(${s.hue},100%,92%,${k*0.7})`;
+        starCtx.arc(xx,yy, s.r*(1+k*2), 0, Math.PI*2);
+        starCtx.fill();
+        // line from cursor
+        if(k>0.55){
+          starCtx.strokeStyle=`hsla(${s.hue},100%,80%,${k*0.35})`;
+          starCtx.beginPath();
+          starCtx.moveTo(mouseX,mouseY);
+          starCtx.lineTo(xx,yy);
+          starCtx.stroke();
+        }
+      }
+      drawn.push({x:xx,y:yy,hue:s.hue});
+    }
+    // constellation lines between near neighbors (sparse sampling)
+    if(!IS_TOUCH) for(let i=0;i<drawn.length;i+=5){
+      for(let j=i+1;j<Math.min(drawn.length,i+18);j++){
+        const a=drawn[i], b=drawn[j];
+        const dx=a.x-b.x, dy=a.y-b.y;
+        const d=Math.hypot(dx,dy);
+        if(d<90){
+          const k=1-d/90;
+          starCtx.strokeStyle=`hsla(${a.hue},100%,80%,${k*0.12})`;
+          starCtx.lineWidth=.5;
+          starCtx.beginPath();
+          starCtx.moveTo(a.x,a.y); starCtx.lineTo(b.x,b.y);
+          starCtx.stroke();
+        }
+      }
+    }
+
+    if(motionOn() && t-lastShoot > 3200+Math.random()*3000){
+      lastShoot=t;
+      spawnShootingStar();
+    }
+    for(let i=shootingStars.length-1;i>=0;i--){
+      const s=shootingStars[i];
+      s.x += s.vx; s.y += s.vy; s.life++;
+      const alpha = Math.max(0, 1 - s.life/s.max);
+      const tailX = s.x - s.vx*8;
+      const tailY = s.y - s.vy*8;
+      const grad = starCtx.createLinearGradient(tailX,tailY,s.x,s.y);
+      grad.addColorStop(0,`hsla(${s.hue},100%,85%,0)`);
+      grad.addColorStop(1,`hsla(${s.hue},100%,90%,${alpha})`);
+      starCtx.strokeStyle=grad;
+      starCtx.lineWidth=1.8;
+      starCtx.beginPath();
+      starCtx.moveTo(tailX,tailY);
+      starCtx.lineTo(s.x,s.y);
+      starCtx.stroke();
+      starCtx.beginPath();
+      starCtx.fillStyle=`hsla(${s.hue},100%,95%,${alpha})`;
+      starCtx.arc(s.x,s.y,1.8,0,Math.PI*2);
+      starCtx.fill();
+      if(s.life>s.max || s.x<-100 || s.x>starW+100) shootingStars.splice(i,1);
+    }
+    requestAnimationFrame(drawStars);
+  }
+
+  /* FX canvas: confetti + shockwave */
+  const fxCanvas=document.getElementById("fx");
+  const fxCtx=fxCanvas && fxCanvas.getContext("2d");
+  let fxParticles=[], fxRings=[], fxW=0, fxH=0;
+  function initFx(){
+    if(!fxCanvas) return;
+    fxW=fxCanvas.clientWidth; fxH=fxCanvas.clientHeight;
+    fxCanvas.width=Math.floor(fxW*dpr);
+    fxCanvas.height=Math.floor(fxH*dpr);
+    fxCtx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  const PALETTE=["#00e5ff","#ff3dcc","#a27bff","#2dffad","#ffc24a","#ffffff"];
+  function spawnConfetti(){
+    if(!motionOn() || !fxCtx) return;
+    const cx=fxW/2, cy=fxH/2;
+    const n=130;
+    for(let i=0;i<n;i++){
+      const ang=Math.random()*Math.PI*2;
+      const sp=3+Math.random()*9;
+      fxParticles.push({
+        x:cx,y:cy,
+        vx:Math.cos(ang)*sp,
+        vy:Math.sin(ang)*sp - 2,
+        g:0.18+Math.random()*0.08,
+        w: 4+Math.random()*7,
+        h: 8+Math.random()*10,
+        rot: Math.random()*Math.PI*2,
+        vr: (Math.random()-0.5)*0.3,
+        col: PALETTE[(Math.random()*PALETTE.length)|0],
+        life:0, max:90+Math.random()*60
+      });
+    }
+  }
+  function spawnShockwave(){
+    if(!motionOn() || !fxCtx) return;
+    fxRings.push({x:fxW/2,y:fxH/2,r:20,life:0,max:45,col:"#00e5ff"});
+    fxRings.push({x:fxW/2,y:fxH/2,r:10,life:0,max:60,col:"#a27bff"});
+  }
+  function drawFx(){
+    if(!fxCtx) return;
+    fxCtx.clearRect(0,0,fxW,fxH);
+    for(let i=fxParticles.length-1;i>=0;i--){
+      const p=fxParticles[i];
+      p.vy+=p.g; p.x+=p.vx; p.y+=p.vy; p.rot+=p.vr; p.life++;
+      const alpha=Math.max(0,1-p.life/p.max);
+      fxCtx.save();
+      fxCtx.translate(p.x,p.y);
+      fxCtx.rotate(p.rot);
+      fxCtx.globalAlpha=alpha;
+      fxCtx.fillStyle=p.col;
+      fxCtx.shadowColor=p.col;
+      fxCtx.shadowBlur=12;
+      fxCtx.fillRect(-p.w/2,-p.h/2,p.w,p.h);
+      fxCtx.restore();
+      if(p.life>p.max || p.y>fxH+80) fxParticles.splice(i,1);
+    }
+    for(let i=fxRings.length-1;i>=0;i--){
+      const r=fxRings[i];
+      r.r+=10; r.life++;
+      const alpha=Math.max(0,1-r.life/r.max);
+      fxCtx.beginPath();
+      fxCtx.strokeStyle=r.col;
+      fxCtx.globalAlpha=alpha*0.7;
+      fxCtx.lineWidth=3;
+      fxCtx.shadowColor=r.col;
+      fxCtx.shadowBlur=24;
+      fxCtx.arc(r.x,r.y,r.r,0,Math.PI*2);
+      fxCtx.stroke();
+      fxCtx.globalAlpha=1;
+      fxCtx.shadowBlur=0;
+      if(r.life>r.max) fxRings.splice(i,1);
+    }
+    requestAnimationFrame(drawFx);
+  }
+
+  /* 3D Tilt on card */
+  function initTilt(){
+    const card=document.getElementById("card");
+    if(!card) return;
+    let rx=0, ry=0, trx=0, try_=0;
+    function onMove(e){
+      if(!motionOn()) return;
+      const rect=card.getBoundingClientRect();
+      const cx=rect.left+rect.width/2;
+      const cy=rect.top+rect.height/2;
+      const px=(e.clientX-cx)/rect.width;
+      const py=(e.clientY-cy)/rect.height;
+      trx = -py*6;
+      try_ = px*6;
+    }
+    function loop(){
+      rx += (trx-rx)*0.1;
+      ry += (try_-ry)*0.1;
+      card.style.transform=`translateZ(0) perspective(1200px) rotateX(${rx.toFixed(2)}deg) rotateY(${ry.toFixed(2)}deg)`;
+      requestAnimationFrame(loop);
+    }
+    window.addEventListener("mousemove",onMove,{passive:true});
+    card.addEventListener("mouseleave",()=>{trx=0;try_=0;});
+    loop();
+  }
+
+  /* Cursor sparkles */
+  const spCanvas=document.getElementById("sparkles");
+  const spCtx=spCanvas && spCanvas.getContext("2d");
+  let sparkles=[], spW=0, spH=0, lastSparkT=0, lastMX=0, lastMY=0;
+  function initSparkles(){
+    if(!spCanvas) return;
+    spW=spCanvas.clientWidth; spH=spCanvas.clientHeight;
+    spCanvas.width=Math.floor(spW*dpr);
+    spCanvas.height=Math.floor(spH*dpr);
+    spCtx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  function spawnSparkle(x,y){
+    const c=["#00e5ff","#a27bff","#ff3dcc","#ffc24a","#ffffff"];
+    sparkles.push({
+      x:x+(Math.random()-0.5)*6,
+      y:y+(Math.random()-0.5)*6,
+      vx:(Math.random()-0.5)*1.4,
+      vy:(Math.random()-0.5)*1.4-0.4,
+      r: 1+Math.random()*2.4,
+      life:0,max:40+Math.random()*30,
+      col:c[(Math.random()*c.length)|0]
+    });
+  }
+  function drawSparkles(t){
+    if(!spCtx) return;
+    spCtx.clearRect(0,0,spW,spH);
+    // spawn based on mouse movement
+    if(motionOn()){
+      const mv=Math.hypot(targetMX-lastMX,targetMY-lastMY);
+      if(mv>1 && t-lastSparkT>16){
+        const count=Math.min(4, 1+Math.floor(mv/8));
+        for(let i=0;i<count;i++) spawnSparkle(targetMX,targetMY);
+        lastSparkT=t;
+      }
+      lastMX=targetMX; lastMY=targetMY;
+      // idle sparkles anywhere
+      if(Math.random()<0.12){
+        const x=Math.random()*spW, y=Math.random()*spH;
+        sparkles.push({x,y,vx:0,vy:-0.2,r:.7+Math.random()*1.2,life:0,max:40+Math.random()*40,col:"#ffffff"});
+      }
+    }
+    for(let i=sparkles.length-1;i>=0;i--){
+      const p=sparkles[i];
+      p.x+=p.vx; p.y+=p.vy; p.vy+=0.02; p.life++;
+      const k=1-p.life/p.max;
+      if(k<=0){sparkles.splice(i,1);continue;}
+      spCtx.globalAlpha=k;
+      spCtx.fillStyle=p.col;
+      spCtx.shadowColor=p.col;
+      spCtx.shadowBlur=8;
+      spCtx.beginPath();
+      spCtx.arc(p.x,p.y,p.r*k,0,Math.PI*2);
+      spCtx.fill();
+      // cross glint
+      spCtx.strokeStyle=p.col;
+      spCtx.lineWidth=.6;
+      spCtx.beginPath();
+      spCtx.moveTo(p.x-p.r*2.5,p.y); spCtx.lineTo(p.x+p.r*2.5,p.y);
+      spCtx.moveTo(p.x,p.y-p.r*2.5); spCtx.lineTo(p.x,p.y+p.r*2.5);
+      spCtx.stroke();
+    }
+    spCtx.globalAlpha=1;
+    spCtx.shadowBlur=0;
+    requestAnimationFrame(drawSparkles);
+  }
+
+  /* Magnetic buttons */
+  function initMagnetic(){
+    document.querySelectorAll(".btn, .mode-btn, .bn-btn").forEach(b=>{
+      b.addEventListener("mousemove",(e)=>{
+        if(!motionOn()) return;
+        const r=b.getBoundingClientRect();
+        const x=(e.clientX-r.left-r.width/2)*0.2;
+        const y=(e.clientY-r.top-r.height/2)*0.2;
+        b.style.transform=`translate(${x}px,${y}px)`;
+      });
+      b.addEventListener("mouseleave",()=>{b.style.transform="";});
+    });
+  }
+
+  function initWow(){
+    initStars(); initFx();
+    if(!IS_TOUCH){
+      initSparkles(); initTilt(); initMagnetic();
+    }
+    if(motionOn()){
+      requestAnimationFrame(drawStars);
+      requestAnimationFrame(drawFx);
+      if(!IS_TOUCH) requestAnimationFrame(drawSparkles);
+    }
+    let rzT; window.addEventListener("resize",()=>{
+      clearTimeout(rzT);
+      rzT=setTimeout(()=>{initStars();initFx();if(!IS_TOUCH)initSparkles();},180);
+    });
+  }
+
+  /* EVENTS */
+  document.addEventListener("DOMContentLoaded", async ()=>{
+    load();
+    try { await loadTerms(); } catch(e){ document.getElementById("loader").innerHTML="<div style='color:#8a8cb0;font-family:monospace'>terms.json konnte nicht geladen werden.</div>"; return; }
+    // DEMO-MODUS-Banner — sichtbar wenn Sample-Fallback aktiv
+    if(state.terms && state.terms.length && state.total<=10 && document.querySelector("[data-demo-banner]")===null){
+      const banner=document.createElement("div");
+      banner.setAttribute("data-demo-banner","1");
+      banner.style.cssText="position:fixed;top:0;left:0;right:0;z-index:9000;background:linear-gradient(90deg,#ff4466,#ffaa00);color:#000;font-weight:800;font-size:12px;letter-spacing:.04em;text-align:center;padding:8px 12px;font-family:inherit;box-shadow:0 4px 14px rgba(0,0,0,.5);cursor:pointer";
+      banner.innerHTML="⚠ DEMO-MODUS — "+state.terms.length+" Beispiel-Terme · NICHT aus dem AUGMANITAI-Compendium · keine autorisierten Einträge · terms.json fehlt &nbsp;<span style='opacity:.7;font-weight:600'>(klick zum Ausblenden)</span>";
+      banner.title="Diese Begriffe sind generische Platzhalter, nicht Teil der publizierten 1000 AUG-Terme.";
+      banner.addEventListener("click",()=>banner.remove());
+      document.body.appendChild(banner);
+      document.body.style.paddingTop="36px";
+    }
+    applyI18n();
+    // set initial language UI
+    document.querySelectorAll(".lng").forEach(b=>{
+      b.classList.toggle("active", b.getAttribute("data-lang")===state.lang);
+    });
+    // mode events
+    document.querySelectorAll(".mode-btn").forEach(b=>{
+      b.addEventListener("click",()=>setMode(b.getAttribute("data-mode")));
+    });
+    // band filter events
+    document.querySelectorAll("#bandFilter button").forEach(b=>{
+      b.addEventListener("click",()=>{
+        state.bandFilter=b.getAttribute("data-band");
+        document.querySelectorAll("#bandFilter button").forEach(x=>x.classList.toggle("active",x===b));
+        renderCollection();
+      });
+    });
+    // lang events
+    document.querySelectorAll(".lng").forEach(b=>{
+      b.addEventListener("click",()=>{
+        if(b.disabled) return;
+        state.lang=b.getAttribute("data-lang");
+        document.querySelectorAll(".lng").forEach(x=>x.classList.toggle("active",x===b));
+        save();
+        applyI18n();
+        render();
+        if(state.mode==="collection") renderCollection();
+      });
+    });
+    document.getElementById("nextBtn").addEventListener("click",next);
+    document.getElementById("prevBtn").addEventListener("click",prev);
+    document.getElementById("collectBtn").addEventListener("click",()=>collectCurrent(true));
+    document.getElementById("shareBtn").addEventListener("click",()=>{hapticTap();exportImage();});
+    // bottom nav
+    document.querySelectorAll(".bn-btn").forEach(b=>{
+      b.addEventListener("click",()=>setMode(b.getAttribute("data-mode")));
+    });
+    // tap zones with double-tap-to-collect
+    let lastTapT=0, lastTapX=0, lastTapY=0;
+    document.querySelectorAll("#tapZones .tz").forEach(z=>{
+      z.addEventListener("click",(e)=>{
+        const now=Date.now();
+        const dt=now-lastTapT;
+        const dx=Math.abs(e.clientX-lastTapX);
+        const dy=Math.abs(e.clientY-lastTapY);
+        lastTapT=now; lastTapX=e.clientX; lastTapY=e.clientY;
+        if(dt<320 && dx<40 && dy<40){
+          collectCurrent(true);
+          lastTapT=0;
+          return;
+        }
+        const act=z.getAttribute("data-act");
+        if(act==="prev") prev();
+        else if(act==="next") next();
+        else if(act==="toggle") next();
+      });
+    });
+    document.getElementById("openLegalBtn").addEventListener("click",()=>document.getElementById("legal").classList.add("on"));
+    document.getElementById("openLegalFooter").addEventListener("click",()=>document.getElementById("legal").classList.add("on"));
+
+    /* FIRST-VISIT GATE */
+    (function(){
+      const KEY="aug_disclaimer_acknowledged_v4";
+      const gate=document.getElementById("firstGate");
+      if(!gate) return;
+      let acked=false;
+      try{ acked=localStorage.getItem(KEY)==="1"; }catch(e){}
+      if(!acked){
+        gate.classList.add("on");
+        document.documentElement.style.overflow="hidden";
+      }
+      const ackDe=document.getElementById("gateAck");
+      const ackEn=document.getElementById("gateAckEn");
+      const enterDe=document.getElementById("gateEnter");
+      const enterEn=document.getElementById("gateEnterEn");
+      const leaveDe=document.getElementById("gateLeave");
+      const leaveEn=document.getElementById("gateLeaveEn");
+      ackDe.addEventListener("change",()=>{ enterDe.disabled=!ackDe.checked; });
+      ackEn.addEventListener("change",()=>{ enterEn.disabled=!ackEn.checked; });
+      function enter(){
+        try{ localStorage.setItem(KEY,"1"); }catch(e){}
+        gate.classList.remove("on");
+        document.documentElement.style.overflow="";
+      }
+      function leave(){ window.location.href="about:blank"; }
+      enterDe.addEventListener("click",enter);
+      enterEn.addEventListener("click",enter);
+      leaveDe.addEventListener("click",leave);
+      leaveEn.addEventListener("click",leave);
+      document.querySelectorAll("[data-gatelang]").forEach(b=>{
+        b.addEventListener("click",()=>{
+          const lng=b.getAttribute("data-gatelang");
+          document.querySelectorAll("[data-gatelang]").forEach(x=>x.classList.toggle("active",x===b));
+          document.querySelectorAll("[data-gatelocale]").forEach(x=>{
+            x.style.display = (x.getAttribute("data-gatelocale")===lng) ? "" : "none";
+          });
+        });
+      });
+    })();
+    document.getElementById("closeLegal").addEventListener("click",()=>document.getElementById("legal").classList.remove("on"));
+    document.getElementById("legal").addEventListener("click",(e)=>{if(e.target.id==="legal")document.getElementById("legal").classList.remove("on")});
+    document.getElementById("resetBtn").addEventListener("click",()=>{
+      state.seen=new Set(); state.streak=0; state.lastStreakDate=null; save();
+      render(); if(state.mode==="collection") renderCollection();
+    });
+    // keyboard
+    document.addEventListener("keydown",(e)=>{
+      if(e.target.tagName==="INPUT"||e.target.tagName==="TEXTAREA") return;
+      if(e.key==="ArrowRight"||e.key===" "){ e.preventDefault(); next(); }
+      else if(e.key==="ArrowLeft"){ e.preventDefault(); prev(); }
+      else if(e.key==="Enter"){ collectCurrent(); }
+      else if(e.key==="Escape"){ document.getElementById("legal").classList.remove("on"); }
+    });
+    // Long-press peek: tap+hold term name → show band + id + seen-status tooltip
+    (function(){
+      const tip=document.createElement("div");
+      tip.className="peek-tooltip";
+      tip.setAttribute("aria-hidden","true");
+      document.body.appendChild(tip);
+      const target=document.getElementById("termName");
+      if(!target) return;
+      let pressT=null, shown=false, startX=0, startY=0;
+      const show=(x,y)=>{
+        const term=getTerm(state.idx); if(!term) return;
+        const bn=(I18N[state.lang].bandName&&I18N[state.lang].bandName[term.b])||("Band "+term.b);
+        const seen=state.seen.has(term.id);
+        const seenLabel = state.lang==="en"
+          ? (seen?"collected":"not collected")
+          : (seen?"entdeckt":"nicht entdeckt");
+        tip.textContent=`${term.id} · B${term.b} · ${bn} · ${seenLabel}`;
+        tip.style.left=Math.min(window.innerWidth-10, Math.max(10, x))+"px";
+        tip.style.top=y+"px";
+        tip.classList.add("on");
+        shown=true;
+        hapticTap();
+      };
+      const hide=()=>{ tip.classList.remove("on"); shown=false; };
+      const onDown=(e)=>{
+        const pt=e.touches?e.touches[0]:e;
+        startX=pt.clientX; startY=pt.clientY;
+        clearTimeout(pressT);
+        pressT=setTimeout(()=>show(pt.clientX,pt.clientY),450);
+      };
+      const onMove=(e)=>{
+        const pt=e.touches?e.touches[0]:e;
+        if(Math.abs(pt.clientX-startX)>8 || Math.abs(pt.clientY-startY)>8){
+          clearTimeout(pressT); pressT=null;
+          if(shown) hide();
+        }
+      };
+      const onUp=()=>{ clearTimeout(pressT); pressT=null; if(shown) setTimeout(hide,900); };
+      target.addEventListener("mousedown",onDown);
+      target.addEventListener("mousemove",onMove);
+      target.addEventListener("mouseup",onUp);
+      target.addEventListener("mouseleave",onUp);
+      target.addEventListener("touchstart",onDown,{passive:true});
+      target.addEventListener("touchmove",onMove,{passive:true});
+      target.addEventListener("touchend",onUp,{passive:true});
+      target.addEventListener("touchcancel",onUp,{passive:true});
+    })();
+
+    // Rubber-band swipe with edge-glow feedback + peek-preview
+    const stageEl=document.getElementById("stage");
+    const cardEl=document.getElementById("card");
+    // inject edge-glow indicators lazily
+    let edgeL=document.querySelector(".edge-glow.left");
+    let edgeR=document.querySelector(".edge-glow.right");
+    if(!edgeL){ edgeL=document.createElement("div"); edgeL.className="edge-glow left"; stageEl.appendChild(edgeL); }
+    if(!edgeR){ edgeR=document.createElement("div"); edgeR.className="edge-glow right"; stageEl.appendChild(edgeR); }
+    let tx=0, ty=0, tStart=0, dragging=false, swipeLock=null;
+    const SWIPE_THRESHOLD = 56;
+    const ANGLE_LOCK = 14; // px of vertical allowed before cancelling horizontal
+    stageEl.addEventListener("touchstart",(e)=>{
+      if(e.touches.length>1) return;
+      tx=e.touches[0].clientX; ty=e.touches[0].clientY;
+      tStart=Date.now();
+      dragging=true; swipeLock=null;
+    },{passive:true});
+    stageEl.addEventListener("touchmove",(e)=>{
+      if(!dragging || e.touches.length>1) return;
+      const dx=e.touches[0].clientX-tx;
+      const dy=e.touches[0].clientY-ty;
+      if(swipeLock===null){
+        if(Math.abs(dx)>8 || Math.abs(dy)>8){
+          swipeLock = (Math.abs(dx) > Math.abs(dy)) ? "h" : "v";
+        } else return;
+      }
+      if(swipeLock==="v"){ return; }
+      // rubber-band: logarithmic falloff so card follows finger with resistance
+      const rb = Math.sign(dx) * (Math.abs(dx)<120 ? Math.abs(dx)*0.6 : 72 + Math.log(Math.abs(dx)-119)*18);
+      const rot = rb * 0.025;
+      const fade = Math.max(0, 1 - Math.abs(dx)/260);
+      cardEl.style.transition="none";
+      cardEl.style.transform=`translate3d(${rb.toFixed(1)}px,0,0) rotate(${rot.toFixed(2)}deg)`;
+      cardEl.style.opacity=(0.55+0.45*fade).toFixed(3);
+      // edge-glow: left swipe (prev) shows LEFT edge (cyan), right swipe shows RIGHT edge (magenta)
+      if(dx>16){ edgeL.classList.add("on"); edgeR.classList.remove("on"); }
+      else if(dx<-16){ edgeR.classList.add("on"); edgeL.classList.remove("on"); }
+      else { edgeL.classList.remove("on"); edgeR.classList.remove("on"); }
+    },{passive:true});
+    stageEl.addEventListener("touchend",(e)=>{
+      if(!dragging) return;
+      dragging=false;
+      const dx=(e.changedTouches[0]?.clientX||tx)-tx;
+      const dy=(e.changedTouches[0]?.clientY||ty)-ty;
+      edgeL.classList.remove("on"); edgeR.classList.remove("on");
+      cardEl.style.transition="transform .42s var(--ease), opacity .42s var(--ease)";
+      const commit = swipeLock==="h" && Math.abs(dx)>SWIPE_THRESHOLD && Math.abs(dx)>Math.abs(dy)+ANGLE_LOCK;
+      if(commit){
+        // fling the card off-screen in the swipe direction
+        const off = dx<0 ? -window.innerWidth*0.6 : window.innerWidth*0.6;
+        cardEl.style.transform=`translate3d(${off}px,0,0) rotate(${dx<0?-6:6}deg)`;
+        cardEl.style.opacity="0";
+        hapticSwipe();
+        setTimeout(()=>{
+          cardEl.style.transition="none";
+          cardEl.style.transform="";
+          cardEl.style.opacity="";
+          if(dx<0) next(); else prev();
+          requestAnimationFrame(()=>{ cardEl.style.transition=""; });
+        }, 230);
+      } else {
+        // snap back
+        cardEl.style.transform="";
+        cardEl.style.opacity="";
+      }
+      swipeLock=null;
+    },{passive:true});
+    stageEl.addEventListener("touchcancel",()=>{
+      dragging=false; swipeLock=null;
+      edgeL.classList.remove("on"); edgeR.classList.remove("on");
+      cardEl.style.transition="transform .42s var(--ease), opacity .42s var(--ease)";
+      cardEl.style.transform=""; cardEl.style.opacity="";
+    },{passive:true});
+
+    // Ripple effect on all interactive controls — spawn at tap point
+    function spawnRipple(target, x, y){
+      if(!target) return;
+      const rect=target.getBoundingClientRect();
+      const r=document.createElement("span");
+      r.className="ripple";
+      const size=Math.max(rect.width, rect.height)*1.4;
+      r.style.width=size+"px";
+      r.style.height=size+"px";
+      r.style.left=(x-rect.left)+"px";
+      r.style.top=(y-rect.top)+"px";
+      const cs=getComputedStyle(target);
+      if(cs.position==="static") target.style.position="relative";
+      const prevOverflow=target.style.overflow;
+      target.style.overflow="hidden";
+      target.appendChild(r);
+      setTimeout(()=>{ r.remove(); target.style.overflow=prevOverflow; }, 580);
+    }
+    const RIPPLE_SEL=".btn,.mode-btn,.bn-btn,.landing-cta,.landing-skip,.landing-chip,#resetBtn,#motionToggle,.lng,.pill";
+    document.addEventListener("pointerdown",(e)=>{
+      const t=e.target.closest(RIPPLE_SEL);
+      if(!t) return;
+      spawnRipple(t, e.clientX, e.clientY);
+    },{passive:true});
+    // initial query lang
+    const url=new URL(window.location.href);
+    const qLang=url.searchParams.get("lang");
+    if(qLang && I18N[qLang]){
+      state.lang=qLang;
+      document.querySelectorAll(".lng").forEach(x=>x.classList.toggle("active",x.getAttribute("data-lang")===qLang));
+      applyI18n();
+    }
+    // start — show landing first, not the term
+    state.idx=todayIndex();
+    // Hide stage until user taps Start
+    document.getElementById("card").style.display="none";
+    document.getElementById("tapZones").classList.remove("on");
+    document.getElementById("landing").classList.add("on");
+    // Landing handlers
+    const startApp=(targetMode)=>{
+      document.getElementById("landing").classList.remove("on");
+      setMode(targetMode||"today");
+      hapticCollect();
+    };
+    document.getElementById("landingStart").addEventListener("click",()=>startApp("today"));
+    document.getElementById("landingSkip").addEventListener("click",()=>startApp("today"));
+    // Rotating kicker phrases
+    const KICKERS_DE=["AUGMANITAI · 1000 Begriffe","Phänomenologie der Mensch-KI-Interaktion","Rein deskriptiv · Bilingual","Benannte Momente · Keine Ratschläge","Open Research · CC BY-NC-ND 4.0"];
+    const KICKERS_EN=["AUGMANITAI · 1000 Terms","Phenomenology of human–AI interaction","Purely descriptive · Bilingual","Named moments · No advice","Open research · CC BY-NC-ND 4.0"];
+    let kIdx=0;
+    const kickEl=document.getElementById("landingKicker");
+    const kickTimer=setInterval(()=>{
+      if(!document.getElementById("landing").classList.contains("on")){ clearInterval(kickTimer); return; }
+      if(!kickEl) return;
+      kickEl.style.opacity="0";
+      setTimeout(()=>{
+        const list=state.lang==="en"?KICKERS_EN:KICKERS_DE;
+        kIdx=(kIdx+1)%list.length;
+        kickEl.textContent=list[kIdx];
+        kickEl.style.opacity="1";
+      },300);
+    }, 3800);
+    // chips as quick-entry
+    const chipMap={landingChip1:"today",landingChip2:"random",landingChip3:"stream",landingChip4:"collection"};
+    Object.keys(chipMap).forEach(id=>{
+      const el=document.getElementById(id);
+      if(el){ el.style.cursor="pointer"; el.addEventListener("click",()=>startApp(chipMap[id])); }
+    });
+    initWow();
+    // Motion toggle
+    const mtBtn=document.getElementById("motionToggle");
+    if(mtBtn){
+      const sync=()=>{ mtBtn.textContent = MOTION ? (state.lang==="en"?"Motion: on":"Effekte: an") : (state.lang==="en"?"Motion: off":"Effekte: aus"); };
+      sync();
+      mtBtn.addEventListener("click",()=>{
+        MOTION=!MOTION;
+        document.documentElement.classList.toggle("motion-off",!MOTION);
+        if(MOTION){ requestAnimationFrame(drawStars); requestAnimationFrame(drawFx); if(!IS_TOUCH) requestAnimationFrame(drawSparkles); }
+        sync();
+      });
+    }
+    // Audio toggle (Sound on/off). Default: OFF. Requires user gesture.
+    const sndBtn=document.getElementById("soundToggle");
+    if(sndBtn){
+      const sync=()=>{
+        sndBtn.textContent = AUDIO.on
+          ? (state.lang==="en"?"Sound: on":"Klang: an")
+          : (state.lang==="en"?"Sound: off":"Klang: aus");
+      };
+      sync();
+      sndBtn.addEventListener("click",()=>{
+        if(AUDIO.on){ AUDIO.disable(); }
+        else {
+          if(AUDIO.enable()){
+            // Peak welcome sound: reveal current band
+            const tm=getTerm(state.idx); AUDIO.reveal(tm?tm.b:1);
+          }
+        }
+        sync();
+        // also sync drone button label since drone depends on audio
+        const dBtn=document.getElementById("droneToggle");
+        if(dBtn && !AUDIO.on){
+          dBtn.textContent = state.lang==="en"?"Drone: off":"Drone: aus";
+        }
+      });
+    }
+    // Drone toggle (ambient pad). Requires Sound: on.
+    let droneOn=false;
+    const dBtn=document.getElementById("droneToggle");
+    if(dBtn){
+      const sync=()=>{
+        dBtn.textContent = droneOn
+          ? (state.lang==="en"?"Drone: on":"Drone: an")
+          : (state.lang==="en"?"Drone: off":"Drone: aus");
+      };
+      sync();
+      dBtn.addEventListener("click",()=>{
+        if(!AUDIO.on){
+          if(!AUDIO.enable()) return;
+          document.getElementById("soundToggle").textContent = state.lang==="en"?"Sound: on":"Klang: an";
+        }
+        droneOn=!droneOn;
+        if(droneOn){
+          const tm=getTerm(state.idx);
+          AUDIO.startDrone(tm?tm.b:1);
+        } else {
+          AUDIO.stopDrone();
+        }
+        sync();
+      });
+    }
+    // Gyro toggle (DeviceOrientation parallax). iOS requires permission.
+    const gBtn=document.getElementById("gyroToggle");
+    if(gBtn){
+      const sync=()=>{
+        gBtn.textContent = GYRO.on
+          ? (state.lang==="en"?"Gyro: on":"Gyro: an")
+          : (state.lang==="en"?"Gyro: off":"Gyro: aus");
+      };
+      sync();
+      gBtn.addEventListener("click",async ()=>{
+        if(GYRO.on){ GYRO.stop(); sync(); return; }
+        const ok = await GYRO.enable();
+        if(ok) sync();
+      });
+    }
+    document.getElementById("loader").classList.add("gone");
+    setTimeout(()=>document.getElementById("loader").remove(),500);
+  });
+})();
+</script>
+</body>
+</html>
