@@ -5,9 +5,11 @@
   "author": "Andreas Ehstand",
   "orcid": "0009-0006-3773-7796",
   "framework": "Neomanitai",
+  "subcategory": "FLUXMANITAI",
+  "subcategory_scope": "Phänomene im Bewegungszwischenraum der Mensch-KI-Interaktion (Übergänge, Pausen, Fokussierungs-Momente, Turn-Dynamik). Abgrenzung zu AUGMANITAI: keine Überschneidung mit den 1000 publizierten AUG-Termen.",
   "terms": [
     {
-      "id": "NMT-001",
+      "id": "FLX-001",
       "b": 4,
       "name": "Giggle Chain",
       "de": "Kaskadierende Abfolge humoristischer Wendungen zwischen Mensch und KI, in der jede Partei die komische Ebene der vorherigen Antwort aufgreift und in der Tonalität leicht zuspitzt, bis die Kette entweder ausläuft oder durch Themenwechsel gebrochen wird.",
@@ -16,7 +18,7 @@
       "en_a": "Distinction: No claim about the quality, appropriateness, or function of the humor. No recommendation to produce or avoid such chains. Purely a descriptive naming of a structural pattern across turns."
     },
     {
-      "id": "NMT-002",
+      "id": "FLX-002",
       "b": 1,
       "name": "Pause Power",
       "de": "Der Effekt, dass eine bewusst gesetzte Pause oder knappe Nicht-Antwort im Gespräch mehr strukturelle Wirkung entfaltet als eine ausgefüllte Antwort — durch den Raum, den sie für Reflexion, Gewichtsverschiebung oder Erwartungsumkehr auf Seiten der Gesprächspartner öffnet.",
@@ -25,7 +27,7 @@
       "en_a": "Distinction: Not a recommendation for silence tactics or manipulation strategies. No claim about effectiveness in specific situations. Purely a descriptive observation of a communicative dynamic."
     },
     {
-      "id": "NMT-003",
+      "id": "FLX-003",
       "b": 7,
       "name": "Semantic Spark",
       "de": "Der Moment, in dem eine einzelne sprachliche Formulierung — oft unerwartet und ohne vorangehende explizite Suche — eine bislang diffuse oder nur implizit vorhandene Bedeutung plötzlich fokussiert und für die Beteiligten als konturiert wahrnehmbar macht.",
