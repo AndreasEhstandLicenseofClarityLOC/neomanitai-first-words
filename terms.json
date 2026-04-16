@@ -1,0 +1,37 @@
+{
+  "total": 3,
+  "version": "0.0.3",
+  "license": "CC BY-NC-ND 4.0",
+  "author": "Andreas Ehstand",
+  "orcid": "0009-0006-3773-7796",
+  "framework": "Neomanitai",
+  "terms": [
+    {
+      "id": "AUG-GCH",
+      "b": 4,
+      "name": "Giggle Chain",
+      "de": "Kaskadierende Abfolge humoristischer Wendungen zwischen Mensch und KI, in der jede Partei die komische Ebene der vorherigen Antwort aufgreift und in der Tonalität leicht zuspitzt, bis die Kette entweder ausläuft oder durch Themenwechsel gebrochen wird.",
+      "en": "Cascading sequence of humorous turns between human and AI in which each party picks up and slightly sharpens the comic register of the previous reply, until the chain either fades out or is broken by a topic shift.",
+      "de_a": "Abgrenzung: Keine Aussage über Qualität, Angemessenheit oder Funktion des Humors. Keine Empfehlung, solche Ketten zu erzeugen oder zu vermeiden. Rein deskriptive Benennung eines strukturellen Musters im Turn-Verlauf.",
+      "en_a": "Distinction: No claim about the quality, appropriateness, or function of the humor. No recommendation to produce or avoid such chains. Purely a descriptive naming of a structural pattern across turns."
+    },
+    {
+      "id": "AUG-PPW",
+      "b": 1,
+      "name": "Pause Power",
+      "de": "Der Effekt, dass eine bewusst gesetzte Pause oder knappe Nicht-Antwort im Gespräch mehr strukturelle Wirkung entfaltet als eine ausgefüllte Antwort — durch den Raum, den sie für Reflexion, Gewichtsverschiebung oder Erwartungsumkehr auf Seiten der Gesprächspartner öffnet.",
+      "en": "The effect by which a deliberately placed pause or minimal non-reply carries more structural weight in the exchange than a filled answer — through the space it opens for reflection, shift of emphasis, or reversal of expectation on the side of the interlocutors.",
+      "de_a": "Abgrenzung: Keine Handlungsempfehlung für Schweige-Taktiken oder Manipulationsstrategien. Keine Aussage über Wirksamkeit in konkreten Situationen. Rein deskriptive Beobachtung einer kommunikativen Dynamik.",
+      "en_a": "Distinction: Not a recommendation for silence tactics or manipulation strategies. No claim about effectiveness in specific situations. Purely a descriptive observation of a communicative dynamic."
+    },
+    {
+      "id": "AUG-SPK",
+      "b": 7,
+      "name": "Semantic Spark",
+      "de": "Der Moment, in dem eine einzelne sprachliche Formulierung — oft unerwartet und ohne vorangehende explizite Suche — eine bislang diffuse oder nur implizit vorhandene Bedeutung plötzlich fokussiert und für die Beteiligten als konturiert wahrnehmbar macht.",
+      "en": "The moment in which a single linguistic formulation — often unexpected and without a preceding explicit search — suddenly focuses a previously diffuse or only implicit meaning and renders it perceptually contoured for the participants.",
+      "de_a": "Abgrenzung: Keine Aussage über Wahrheit, Richtigkeit oder Qualität der fokussierten Bedeutung. Kein Urteil darüber, ob das Erkenntnis-Ereignis subjektiv oder geteilt ist. Rein deskriptive Benennung des Fokussierungs-Moments.",
+      "en_a": "Distinction: No claim about the truth, correctness, or quality of the focused meaning. No judgment about whether the recognition event is subjective or shared. Purely a descriptive naming of the focusing moment."
+    }
+  ]
+}

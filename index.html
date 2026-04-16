@@ -1747,6 +1747,7 @@
       }
     }
     if(!data || !data.terms) { data = SAMPLE_TERMS; }
+    state.demo = !!data.sample;
     state.terms=data.terms;
     state.total=data.total||state.terms.length;
     document.getElementById("counterTotal").textContent=state.total;
@@ -2673,8 +2674,8 @@
   document.addEventListener("DOMContentLoaded", async ()=>{
     load();
     try { await loadTerms(); } catch(e){ document.getElementById("loader").innerHTML="<div style='color:#8a8cb0;font-family:monospace'>terms.json konnte nicht geladen werden.</div>"; return; }
-    // DEMO-MODUS-Banner — sichtbar wenn Sample-Fallback aktiv
-    if(state.terms && state.terms.length && state.total<=10 && document.querySelector("[data-demo-banner]")===null){
+    // DEMO-MODUS-Banner — sichtbar nur wenn interner SAMPLE_TERMS-Fallback geladen wurde
+    if(state.demo===true && document.querySelector("[data-demo-banner]")===null){
       const banner=document.createElement("div");
       banner.setAttribute("data-demo-banner","1");
       banner.style.cssText="position:fixed;top:0;left:0;right:0;z-index:9000;background:linear-gradient(90deg,#ff4466,#ffaa00);color:#000;font-weight:800;font-size:12px;letter-spacing:.04em;text-align:center;padding:8px 12px;font-family:inherit;box-shadow:0 4px 14px rgba(0,0,0,.5);cursor:pointer";
