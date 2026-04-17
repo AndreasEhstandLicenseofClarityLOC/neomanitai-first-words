@@ -30,3 +30,10 @@ Andreas Ehstand · ORCID [0009-0006-3773-7796](https://orcid.org/0009-0006-3773-
 ## Privacy
 
 No tracking. No cookies. No external requests. Progress is stored locally in the browser only.
+
+## Ecosystem
+
+Part of the MANITAI framework ecosystem:
+- **[AUGMANITAI](https://github.com/AndreasEhstandLicenseofClarityLOC/augmanitai)** — 1000-term core compendium (DOI-published on Zenodo)
+- **[NEOMANITAI Terms](https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms)** — 6182 terms, 9618 HTML pages
+- **[PERMANITAI](https://github.com/AndreasEhstandLicenseofClarityLOC/permanitai-framework)** — Universal Performance Factor Analysis for intelligent entities, business teams, world-class performers, and managers
